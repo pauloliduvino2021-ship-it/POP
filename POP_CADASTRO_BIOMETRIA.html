@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>POP - Cadastro de Biometria no Relógio de Ponto</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1000px; margin: 40px auto; padding: 20px; line-height: 1.6; background: #f5f7fa; }
+        h1 { color: #003366; border-bottom: 3px solid #003366; padding-bottom: 10px; }
+        h2 { color: #005599; margin-top: 30px; border-left: 5px solid #005599; padding-left: 15px; }
+        h3 { color: #0077aa; margin-top: 20px; }
+        .atencao { background: #fff3cd; border-left: 6px solid #ffc107; padding: 12px; margin: 20px 0; border-radius: 8px; }
+        .importante { background: #d9edf7; border-left: 6px solid #31708f; padding: 12px; margin: 20px 0; border-radius: 8px; }
+        .dica { background: #dff0d8; border-left: 6px solid #3c763d; padding: 12px; margin: 20px 0; border-radius: 8px; }
+        .footer { margin-top: 40px; font-size: 12px; text-align: center; border-top: 1px solid #ccc; padding-top: 15px; color: #666; }
+        ul, ol { margin: 10px 0 15px 25px; }
+        li { margin: 6px 0; }
+        .passo { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin: 15px 0; }
+        .passo-numero { background: #003366; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 10px; }
+    </style>
+</head>
+<body>
+
+<h1>POP – Cadastro de Biometria no Relógio de Ponto</h1>
+<p><strong>Código:</strong> POP.RH.010<br><strong>Versão:</strong> 1.0<br><strong>Responsável:</strong> Departamento Pessoal</p>
+
+<h2>1. EQUIPAMENTOS E MATERIAIS NECESSÁRIOS</h2>
+<ul>
+    <li>Colaborador estar cadastrado no <strong>MD Comune</strong></li>
+    <li>Crachá do colaborador (para consulta do número da credencial)</li>
+</ul>
+
+<div class="importante">
+    <strong>📌 OBSERVAÇÃO:</strong> O número do crachá do colaborador é o <strong>número do PIS</strong>.
+</div>
+
+<h2>2. INSTRUÇÕES OPERACIONAIS</h2>
+
+<div class="passo">
+    <strong><span class="passo-numero">1</span> Pressione a tecla F1 no terminal</strong>
+</div>
+
+<div class="passo">
+    <strong><span class="passo-numero">2</span> Digite 91 e pressione Enter (letra E na cor VERDE)</strong>
+</div>
+
+<div class="passo">
+    <strong><span class="passo-numero">3</span> Aguarde a mensagem "Informe o Supervisor"</strong><br>
+    Digite o número do supervisor responsável pelo relógio e pressione Enter (letra E na cor VERDE)
+</div>
+
+<div class="passo">
+    <strong><span class="passo-numero">4</span> Autenticação do Supervisor</strong><br>
+    <strong>Cenário A:</strong> Aguarde "Informe a Senha". Digite a senha do supervisor e pressione Enter.<br>
+    <strong>Cenário B:</strong> A luz vermelha acenderá para confirmar com a biometria do responsável.
+</div>
+
+<div class="passo">
+    <strong><span class="passo-numero">5</span> Pressione Enter novamente para habilitar a biometria</strong>
+</div>
+
+<div class="passo">
+    <strong><span class="passo-numero">6</span> Digite o número da credencial (PIS do colaborador) e pressione Enter</strong>
+</div>
+
+<div class="passo">
+    <strong><span class="passo-numero">7</span> Na tela "Selecione o Dedo Indicador Direito", pressione Enter</strong>
+</div>
+
+<h3>2.1 Cadastro do Dedo Indicador Direito</h3>
+<ul>
+    <li>A luz vermelha acenderá</li>
+    <li><strong>Procedimento correto:</strong>
+        <ul>
+            <li>Apoie o dedo sobre a luz</li>
+            <li>A luz piscará 3 vezes (cada piscada indica leitura)</li>
+            <li>Pressione o dedo → aguarde piscar → tire o dedo → pressione novamente</li>
+            <li>Repita até completar as 3 piscadas</li>
+        </ul>
+    </li>
+    <li>Ao final da 3ª leitura, a luz apagará</li>
+</ul>
+
+<div class="passo">
+    <strong><span class="passo-numero">8</span> Na tela "Selecione o Dedo Indicador Esquerdo", pressione Enter</strong>
+</div>
+
+<h3>2.2 Cadastro do Dedo Indicador Esquerdo</h3>
+<ul>
+    <li>A luz vermelha acenderá novamente</li>
+    <li>Repita o mesmo procedimento de leitura (3 piscadas)</li>
+</ul>
+
+<div class="passo">
+    <strong><span class="passo-numero">9</span> Aguarde a mensagem "Digital Incluída com Sucesso"</strong>
+</div>
+
+<div class="passo">
+    <strong><span class="passo-numero">10</span> Pressione Cancelar (letra C na cor VERMELHA) até retornar ao menu inicial</strong>
+</div>
+
+<div class="passo">
+    <strong><span class="passo-numero">11</span> Para testar, encoste o dedo na luz</strong><br>
+    O comprovante de marcação será impresso ao lado
+</div>
+
+<h2>3. OBSERVAÇÕES IMPORTANTES</h2>
+<ul>
+    <li>Certifique-se de que o dedo do colaborador esteja <strong>limpo e seco</strong> para uma leitura eficaz</li>
+    <li>Caso ocorra erro na leitura, repita o procedimento desde o passo referente ao dedo com falha</li>
+    <li>O comprovante de marcação ao final serve como confirmação de que o cadastro foi realizado com sucesso</li>
+</ul>
+
+<div class="atencao">
+    <strong>⚠️ ATENÇÃO:</strong> Ao dar erro de leitura 2 vezes, pode ser cadastrado <strong>qualquer outro dedo</strong>.
+</div>
+
+<div class="footer">
+    POP - Cadastro de Biometria | Comercial Maluli | Versão 1.0
+</div>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>POP - Relatório de Frequência de Aprendizes</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1000px; margin: 40px auto; padding: 20px; line-height: 1.6; background: #f5f7fa; }
+        h1 { color: #003366; border-bottom: 3px solid #003366; padding-bottom: 10px; }
+        h2 { color: #005599; margin-top: 30px; border-left: 5px solid #005599; padding-left: 15px; }
+        h3 { color: #0077aa; margin-top: 20px; }
+        .atencao { background: #fff3cd; border-left: 6px solid #ffc107; padding: 12px; margin: 20px 0; border-radius: 8px; }
+        .importante { background: #d9edf7; border-left: 6px solid #31708f; padding: 12px; margin: 20px 0; border-radius: 8px; }
+        .dica { background: #dff0d8; border-left: 6px solid #3c763d; padding: 12px; margin: 20px 0; border-radius: 8px; }
+        .footer { margin-top: 40px; font-size: 12px; text-align: center; border-top: 1px solid #ccc; padding-top: 15px; color: #666; }
+        ul, ol { margin: 10px 0 15px 25px; }
+        li { margin: 6px 0; }
+        .checklist { list-style: none; padding-left: 0; }
+        .checklist li:before { content: "☐ "; font-size: 16px; }
+        .passo { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin: 15px 0; }
+        .passo-numero { background: #003366; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 10px; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        td, th { border: 1px solid #ccc; padding: 8px; vertical-align: top; }
+        th { background: #e6e6e6; }
+    </style>
+</head>
+<body>
+
+<h1>POP – Relatório de Frequência de Aprendizes</h1>
+<p><strong>Código:</strong> POP.RH.008<br><strong>Versão:</strong> 1.0<br><strong>Responsável:</strong> Departamento Pessoal</p>
+<p><strong>Prazo:</strong> Realizar antes do fechamento da folha de pagamento</p>
+
+<h2>1. ACESSAR O SISTEMA CIEE</h2>
+<ul>
+    <li>Abrir o navegador e acessar: <code>https://loginsso-prod.ciee.org.br/login/secretaria</code></li>
+    <li>Na página inicial, clicar na opção <strong>"Login Empresa"</strong></li>
+    <li>Preencher as credenciais:
+        <ul>
+            <li><strong>Usuário:</strong> EMP-1065851</li>
+            <li><strong>Senha:</strong> 18110</li>
+        </ul>
+    </li>
+    <li>Autenticação de dois fatores:
+        <ul>
+            <li>Selecionar a opção para receber o código por <strong>e-mail</strong> (é mais rápido)</li>
+            <li>O código será enviado para: <code>financeiro@comercialmaluli.com.br</code></li>
+            <li>Inserir o código recebido para concluir o login</li>
+        </ul>
+    </li>
+</ul>
+
+<h2>2. NAVEGAR E GERAR RELATÓRIO DE FREQUÊNCIA</h2>
+<ul>
+    <li>Com a plataforma aberta, clique no ícone de <strong>três traços horizontais</strong> no canto superior esquerdo</li>
+    <li>No menu, siga: <strong>Relatório > Frequência</strong></li>
+    <li>Preencher:
+        <ul>
+            <li><strong>Data Inicial</strong> (início do período)</li>
+            <li><strong>Data Final</strong> (fim do período)</li>
+        </ul>
+    </li>
+    <li><strong>ATENÇÃO:</strong> Após preencher as datas, <strong>não preencha nenhum outro campo</strong>. Clique diretamente em <strong>"BUSCAR"</strong></li>
+    <li>Aguardar o sistema processar e gerar a lista completa de aprendizes</li>
+</ul>
+
+<h2>3. ANALISAR FREQUÊNCIA INDIVIDUAL</h2>
+<ul>
+    <li>A busca retornará uma lista com todos os aprendizes (CPF, Polo, Turma, Unidade)</li>
+    <li>Na coluna à direita, localize o ícone de <strong>"olho"</strong> (visualizar) de cada aprendiz</li>
+    <li>Clique no ícone para abrir o relatório de frequência detalhado</li>
+    <li>Verifique as datas dos encontros (dias de curso) e a marcação ao lado:
+        <ul>
+            <li><strong>PRESENTE</strong> - aprendiz compareceu ao curso</li>
+            <li><strong>AUSENTE</strong> - aprendiz faltou (será descontado no trabalho)</li>
+            <li><strong>EM BRANCO</strong> - instrutor não lançou (precisa cobrar)</li>
+        </ul>
+    </li>
+</ul>
+
+<div class="importante">
+    <strong>📌 ENTENDENDO A DINÂMICA:</strong>
+    <ul>
+        <li>O aprendiz trabalha de segunda a sexta, mas em um desses dias ele é dispensado para ir ao curso</li>
+        <li><strong>Regra 1:</strong> Se no dia do curso ele não comparecer ao CIEE, essa falta será lançada e refletirá como <strong>falta no trabalho</strong>, sendo descontada de seu pagamento</li>
+        <li><strong>Regra 2:</strong> Se o CIEE avisar que não haverá curso no dia previsto, o aprendiz é obrigado a <strong>comparecer ao trabalho</strong>; caso contrário, também será considerada falta</li>
+    </ul>
+</div>
+
+<h2>4. TRATAR PENDÊNCIAS (MARCACÃO EM BRANCO)</h2>
+<ul>
+    <li>Se alguma data estiver <strong>EM BRANCO</strong> (sem marcação de Presença ou Ausente):</li>
+    <li>Criar um registro interno (antes de acionar o CIEE):
+        <ul>
+            <li><strong>Método 1 (Word):</strong> Selecionar toda a página do relatório, copiar e colar em um documento do Word</li>
+            <li><strong>Método 2 (Excel):</strong> Tirar print da página e organizar o layout no Excel</li>
+        </ul>
+    </li>
+    <li>Enviar e-mail para o CIEE solicitando a regularização</li>
+</ul>
+
+<h2>5. MODELO DE E-MAIL PARA O CIEE</h2>
+<div class="dica">
+    <p><strong>Assunto:</strong> Regularização de frequência de aprendizes</p>
+    <p>Boa tarde, Jefferson.</p>
+    <p>Temos jovens aprendizes que no relatório de presença o dia [DATA] consta o campo em branco, precisamos que seja verificado se trata-se de uma ausência ou presença.</p>
+    <p><strong>Razão Social:</strong> COMERCIAL MALULI LTDA<br>
+    <strong>CNPJ:</strong> 51.669.307/0001-10</p>
+    <p>Atenciosamente,<br>
+    Departamento Pessoal</p>
+    <p><em>Obs: alterar campo em AMARELO conforme a necessidade do envio do e-mail.</em></p>
+</div>
+
+<h2>6. FINALIZAR</h2>
+<ul class="checklist">
+    <li>Relatórios prontos e legíveis (impressos ou salvos)</li>
+    <li>Relação final de frequências/faltas dos aprendizes, deixar na frente dos atestados e declarações do período</li>
+    <li>Entregar para <strong>Cristina (Gestora)</strong> para fechamento da folha de pagamento</li>
+    <li>Salvar na pasta compartilhada: <code>DepPessoal e RH/benefícios vt e vr/2026/(mês vigente)</code></li>
+</ul>
+
+<h2>📋 RESUMO DO PASSO A PASSO (DECOREBA)</h2>
+<table>
+    <tr><th>Fase</th><th>Ação</th></tr>
+    <tr><td>1</td><td>Acessar CIEE (EMP-1065851 / 18110) + código por e-mail</td></tr>
+    <tr><td>2</td><td>Relatório > Frequência > Data Inicial e Final > BUSCAR</td></tr>
+    <tr><td>3</td><td>Clicar no "olho" de cada aprendiz</td></tr>
+    <tr><td>4</td><td>Verificar PRESENTE / AUSENTE / EM BRANCO</td></tr>
+    <tr><td>5</td><td>Se EM BRANCO: print/Word + e-mail para CIEE</td></tr>
+    <tr><td>6</td><td>Entregar para Cristina + salvar na pasta compartilhada</td></tr>
+</table>
+
+<div class="atencao">
+    <strong>⚠️ ATENÇÃO:</strong> Se o aprendiz falta no dia de curso, é falta no trabalho e será descontado. Data sem marcação deve ser cobrada do CIEE por e-mail formal.
+</div>
+
+<div class="footer">
+    POP - Relatório de Frequência de Aprendizes | Comercial Maluli | Versão 1.0
+</div>
+
+</body>
+</html>

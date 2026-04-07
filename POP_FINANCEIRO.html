@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>POP - Financeiro</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1000px; margin: 40px auto; padding: 20px; line-height: 1.6; background: #f5f7fa; }
+        h1 { color: #003366; border-bottom: 3px solid #003366; padding-bottom: 10px; }
+        h2 { color: #005599; margin-top: 30px; border-left: 5px solid #005599; padding-left: 15px; }
+        h3 { color: #0077aa; margin-top: 20px; }
+        .atencao { background: #fff3cd; border-left: 6px solid #ffc107; padding: 12px; margin: 20px 0; border-radius: 8px; }
+        .importante { background: #d9edf7; border-left: 6px solid #31708f; padding: 12px; margin: 20px 0; border-radius: 8px; }
+        .dica { background: #dff0d8; border-left: 6px solid #3c763d; padding: 12px; margin: 20px 0; border-radius: 8px; }
+        .footer { margin-top: 40px; font-size: 12px; text-align: center; border-top: 1px solid #ccc; padding-top: 15px; color: #666; }
+        ul, ol { margin: 10px 0 15px 25px; }
+        li { margin: 6px 0; }
+        .checklist { list-style: none; padding-left: 0; }
+        .checklist li:before { content: "☐ "; font-size: 16px; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        td, th { border: 1px solid #ccc; padding: 8px; vertical-align: top; }
+        th { background: #e6e6e6; }
+    </style>
+</head>
+<body>
+
+<h1>POP – Financeiro</h1>
+<p><strong>Código:</strong> POP.FIN.003<br><strong>Versão:</strong> 1.0<br><strong>Responsável:</strong> Financeiro</p>
+
+<h2>1. EXTRATOS BANCÁRIOS</h2>
+
+<h3>1.1 Extrato Bradesco</h3>
+<ul class="checklist">
+    <li>Gerar extrato do dia útil anterior (apenas o que constar como crédito)</li>
+    <li><strong>O que enviar:</strong> Devolução de cheque, Depósito a maior, Depósito a menor, Estorno de depósitos, Depósito do próprio favorecido</li>
+    <li><strong>Débitos:</strong> Destacar em NEGRITO no corpo do e-mail/Excel</li>
+    <li><strong>O que NÃO enviar:</strong> Pix/Transferências, Estornos para cliente, Resgate de investimento, Aplicação/Rentabilidade</li>
+    <li><strong>Formatação da planilha:</strong> Excluir coluna de saldo, manter apenas colunas Data/Lançamento/Crédito/Débito, converter números, aplicar filtro</li>
+    <li><strong>Enviar para:</strong> Cristina, Fábio, Faturamento, Financeiro, Márcio, Milson, contato</li>
+    <li>Verificar débitos automáticos agendados (Enel, Sabesp, Seguro Predial, IPTU, Vivo)</li>
+</ul>
+
+<h3>1.2 Extrato Itaú</h3>
+<ul class="checklist">
+    <li>Gerar extrato do dia útil anterior</li>
+    <li>Filtrar APENAS DEPÓSITO DE CLIENTES (o que constar como DEPÓSITO)</li>
+    <li>Classificar valores do Excel do menor para o maior</li>
+    <li>Enviar apenas a relação de depósitos</li>
+    <li>Conferir saldo disponível do Itaú</li>
+</ul>
+
+<h2>2. PROCESSAMENTO DE ARQUIVOS</h2>
+
+<h3>2.1 Processamento SISPAG - Itaú</h3>
+<ul class="checklist">
+    <li>Acessar menu Mais no internet banking Itaú</li>
+    <li>Navegar: Transmissão de Arquivo > Retorno > Recepcionar</li>
+    <li>Selecionar PAGAMENTO SISPAG</li>
+    <li>Recepcionar todos os arquivos com situação "A RECEPCIONAR"</li>
+    <li>Salvar na pasta: ADMINISTRATIVO - ADM/CNAB/PAGAMENTO/2025/PROCESSADOS</li>
+    <li>Verificar processamento de arquivos SISPAG no Itaú</li>
+</ul>
+
+<h3>2.2 Processamento SISPAG - Protheus</h3>
+<ul class="checklist">
+    <li>Módulo FINANCEIRO (06)</li>
+    <li>Atualizações > Contas a Pagar > Funções do Contas a Pagar</li>
+    <li>Criar filtro dos últimos pagamentos (dia -1)</li>
+    <li>Botão: Outras Funções > CNAB > Receber Arquivo</li>
+    <li>Selecionar sempre Matriz</li>
+    <li>Arquivo de configuração: 341r.2pr</li>
+    <li>Confirmar ok/sim na caixa de texto</li>
+    <li>Após processado: Jogar arquivo na pasta PROCESSADOS</li>
+    <li>Salvar comprovante de envio de arquivo SISPAG na pasta compartilhada</li>
+</ul>
+
+<h3>2.3 Processamento DDA - Protheus</h3>
+<ul class="checklist">
+    <li>Módulo FINANCEIRO (06)</li>
+    <li>Outras Funções > CNAB > Receber Arquivo</li>
+    <li>Selecionar sempre Matriz</li>
+    <li>Arquivo de configuração: DDA.2PR</li>
+    <li>Confirmar ok/sim na caixa de texto</li>
+    <li>Após processado: Jogar arquivo na pasta PROCESSADOS</li>
+</ul>
+
+<h2>3. CONCILIAÇÕES</h2>
+
+<h3>3.1 Conciliação DDA - Protheus</h3>
+<ul class="checklist">
+    <li>Módulo FINANCEIRO (06)</li>
+    <li>Atualizações > Comunicação Bancária > Conciliação DDA</li>
+    <li>Botão + CONCILIAR - Sempre Matriz</li>
+    <li>Confirmar Ok (primeira tela)</li>
+    <li>Na tela da Conciliação, clicar Ok novamente</li>
+    <li>Botão OUTRAS OPÇÕES</li>
+    <li>Selecionar: Gravar Código de Barras</li>
+    <li>Parâmetro: Data do dia até o final do mês vigente</li>
+    <li>Se houver títulos para conciliar: Marcar todos e confirmar</li>
+</ul>
+
+<h2>4. AGENDAMENTOS</h2>
+<ul class="checklist">
+    <li>Realizar agendamentos de pagamentos (fornecedores)</li>
+    <li>Realizar agendamentos de impostos</li>
+    <li>Conferir desdobramentos necessários</li>
+    <li>Agendamentos de boleto a receber</li>
+    <li>Processamento CNAB a receber</li>
+</ul>
+
+<h2>5. RELATÓRIOS</h2>
+
+<h3>5.1 Relatório de Baixa (Fornecedores)</h3>
+<ul class="checklist">
+    <li>Módulo FINANCEIRO (06)</li>
+    <li>Relatórios > Contas a Pagar Adm > Geral Contas a Pagar</li>
+    <li>Parâmetros: data do dia anterior</li>
+    <li>Formato: PDF</li>
+    <li>Caminho: Administrativo/FISCAL E CONTABIL/FISCAL REL DE CONFERENCIA/RELATORIO DE BAIXA/MÊS E ANO</li>
+    <li>Saldo sempre tem que estar ZERADO, exceto ETILUX que paga por cheque</li>
+    <li>Enviar para contabilidade</li>
+</ul>
+
+<h3>5.2 Relatório de Notas sem Transmissão</h3>
+<ul class="checklist">
+    <li>Módulo LIVROS FISCAIS (09)</li>
+    <li>Relatórios > Específicos Maluli > Adm Notas sem transmissão</li>
+    <li>Parâmetros: data de emissão: 1º do mês até data do dia -2 dias</li>
+    <li>Formato: PDF</li>
+    <li>Caminho: Administrativo/FISCAL E CONTABIL/FISCAL REL DE CONFERENCIA/NOTA SEM TRANSMISSÃO/MÊS E ANO</li>
+    <li>Relatório sempre tem que estar ZERADO (sem pendências)</li>
+</ul>
+
+<h3>5.3 Relatório de Agendamentos</h3>
+<ul class="checklist">
+    <li><strong>Relatório Itaú:</strong> Contas a Pagar > Ir para página Contas a Pagar > Consultar > Consultar Pagamento, Transferências e Pix. Status: A efetuar. Data: Data dos Agendamentos no Protheus. Ordenar: Data mais recente. Salvar em Excel pela última página.</li>
+    <li><strong>Relatório Protheus:</strong> Módulo FINANCEIRO (06) > Relatórios > Contas a Pagar Adm > Adm Pagar Logística. Parâmetros: data do dia / data final dos agendamentos. Formato: PDF. Salvar como "AGENDAMENTOS MANHÃ" e "AGENDAMENTOS TARDE"</li>
+</ul>
+
+<h2>6. E-MAILS E COMUNICAÇÕES</h2>
+<ul class="checklist">
+    <li>Enviar e-mail para Cris - Relação de fornecedores agendados</li>
+    <li>Envio contas de consumo para contabilidade</li>
+    <li>Envio relatório baixa de fornecedores para contabilidade</li>
+    <li>Envio de e-mail DDAS em atraso</li>
+    <li>Envio de e-mail DDAS sem agendamentos</li>
+</ul>
+
+<h2>7. LANÇAMENTOS CONTÁBEIS</h2>
+<ul class="checklist">
+    <li>Lançamento nota fiscal de serviço</li>
+    <li>Lançamento das faturas de consumo (Enel, Sabesp, etc.)</li>
+    <li>Verificação no portal das contas de consumo disponíveis</li>
+    <li>Lançamento rescisão - férias - salário em sistema</li>
+    <li>Envio e-mail contabilidade - Comprovante de pagamento de rescisão e FGTS</li>
+    <li>Arquivamento - Comprovante de pagamento de rescisão e FGTS</li>
+</ul>
+
+<h2>8. IMPOSTOS E GUIAS</h2>
+<ul class="checklist">
+    <li>Conferência guias de ST - DIFAL - ISS</li>
+    <li>Salvar guias de impostos fiscais e da folha</li>
+</ul>
+
+<h2>9. CONFERÊNCIAS FINAIS</h2>
+<ul class="checklist">
+    <li>Conferência dos pagamentos do dia</li>
+    <li>Conferência processamento de arquivos CNAB no Itaú</li>
+    <li>Conferência processamento de arquivos SISPAG no Itaú</li>
+    <li>Comprovante de envio de arquivo CNAB - Salvo na pasta compartilhada</li>
+    <li>Comprovante de envio de arquivos SISPAG - Salvo na pasta compartilhada</li>
+</ul>
+
+<div class="footer">
+    POP - Financeiro | Comercial Maluli | Versão 1.0
+</div>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>POP - Cálculo de Desconto de Benefícios na Rescisão</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1000px; margin: 40px auto; padding: 20px; line-height: 1.6; background: #f5f7fa; }
+        h1 { color: #003366; border-bottom: 3px solid #003366; padding-bottom: 10px; }
+        h2 { color: #005599; margin-top: 30px; border-left: 5px solid #005599; padding-left: 15px; }
+        h3 { color: #0077aa; margin-top: 20px; }
+        .atencao { background: #fff3cd; border-left: 6px solid #ffc107; padding: 12px; margin: 20px 0; border-radius: 8px; }
+        .importante { background: #d9edf7; border-left: 6px solid #31708f; padding: 12px; margin: 20px 0; border-radius: 8px; }
+        .dica { background: #dff0d8; border-left: 6px solid #3c763d; padding: 12px; margin: 20px 0; border-radius: 8px; }
+        .footer { margin-top: 40px; font-size: 12px; text-align: center; border-top: 1px solid #ccc; padding-top: 15px; color: #666; }
+        ul, ol { margin: 10px 0 15px 25px; }
+        li { margin: 6px 0; }
+        .passo { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin: 15px 0; }
+        .passo-numero { background: #003366; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 10px; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        td, th { border: 1px solid #ccc; padding: 8px; vertical-align: top; }
+        th { background: #e6e6e6; }
+        .exemplo { background: #e8f4f8; padding: 15px; border-radius: 8px; margin: 15px 0; }
+        .formula { background: #f0f0f0; padding: 10px; border-radius: 5px; font-family: monospace; font-size: 14px; text-align: center; }
+        .email-modelo { background: #f8f8f8; border: 1px solid #ccc; padding: 15px; border-radius: 8px; font-family: monospace; margin: 15px 0; }
+    </style>
+</head>
+<body>
+
+<h1>POP – Cálculo de Desconto de Benefícios na Rescisão</h1>
+<p><strong>Código:</strong> POP.RH.014<br><strong>Versão:</strong> 1.0<br><strong>Responsável:</strong> Departamento Pessoal</p>
+
+<h2>1. OBJETIVO</h2>
+<p>Padronizar o cálculo de desconto de benefícios (VT e VR) na rescisão de colaboradores, garantindo que os valores pagos a mais sejam corretamente descontados.</p>
+
+<div class="importante">
+    <strong>📌 REGRA BÁSICA:</strong> O colaborador recebe os benefícios antecipadamente (compra mensal). Na rescisão, ele deve ser descontado pelos dias que <strong>NÃO TRABALHOU</strong> (dias comprados – dias trabalhados).
+</div>
+
+<h2>2. PASSOS PARA O CÁLCULO</h2>
+
+<div class="passo">
+    <strong><span class="passo-numero">1</span> RELATÓRIO DE PONTO</strong><br>
+    No MD Comune, tire o relatório de ponto do colaborador desligado do <strong>dia 1 ao dia 30</strong> do mês do desligamento. Exporte os dados via Excel.
+</div>
+
+<div class="passo">
+    <strong><span class="passo-numero">2</span> LIMPAR O RELATÓRIO</strong><br>
+    Ao abrir o documento, apague todas as informações acima do espelho de ponto. Em seguida, apague do espelho os <strong>sábados, domingos e feriados</strong> (esses dias não são comprados nos benefícios mensalmente).
+</div>
+
+<div class="passo">
+    <strong><span class="passo-numero">3</span> DIAS TRABALHADOS</strong><br>
+    Identifique e anote quantos dias o colaborador desligado <strong>efetivamente trabalhou</strong> no mês.
+</div>
+
+<div class="passo">
+    <strong><span class="passo-numero">4</span> BENEFÍCIOS COMPRADOS</strong><br>
+    Identifique o que foi comprado na compra mensal de benefícios (VT/VR) para o colaborador. Anote a quantidade de dias e os valores pagos.
+</div>
+
+<div class="passo">
+    <strong><span class="passo-numero">5</span> PREENCHER A PLANILHA</strong><br>
+    Preencha a planilha de descontos na rescisão com as seguintes informações:
+</div>
+
+</td>
+    <tr><th>Campo</th><th>O que preencher</th></tr>
+    <tr><td>Quantidade de dias comprados VT</td><td>Dias comprados no mês</td></tr>
+    <tr><td>Quantidade de dias comprados VR</td><td>Dias comprados no mês</td></tr>
+    <tr><td>Quantidade de dias trabalhados</td><td>Dias efetivamente trabalhados</td></tr>
+……
+
+<div class="passo">
+    <strong><span class="passo-numero">6</span> CALCULAR O SALDO A DESCONTAR</strong><br>
+    <div class="formula">
+        <strong>Fórmula:</strong> Saldo a descontar = (Dias comprados – Dias trabalhados) × Valor por dia
+    </div>
+</div>
+
+<h3>📊 EXEMPLO PRÁTICO</h3>
+<div class="exemplo">
+    <table>
+        <tr><th>Item</th><th>VT</th><th>VR</th></tr>
+        <tr><td>Valor por dia</td><td>R$ 22,64</td><td>R$ 25,00</td></tr>
+        <tr><td>Dias comprados</td><td>19 dias</td><td>19 dias</td></tr>
+        <tr><td>Dias trabalhados</td><td>3 dias</td><td>3 dias</td></tr>
+        <tr><td><strong>Saldo em dias</strong></td><td><strong>16 dias</strong></td><td><strong>16 dias</strong></td></tr>
+        <tr><td><strong>Saldo em valor</strong></td><td><strong>R$ 362,24</strong></td><td><strong>R$ 400,00</strong></td></tr>
+    </table>
+    <div class="importante" style="margin-top: 10px;">
+        <strong>Total a descontar: R$ 762,24</strong>
+    </div>
+</div>
+
+<h2>3. FINALIZAÇÃO</h2>
+<p>Após calcular o valor do desconto, preencha a planilha e siga os passos abaixo:</p>
+
+<h3>3.1. Enviar e-mail para a Cris</h3>
+<p>Monte o e-mail (sempre no mesmo padrão) e envie para: <strong>adm@comercialmaluli.com.br</strong></p>
+
+<div class="email-modelo">
+    <strong>📧 MODELO DE E-MAIL PADRÃO:</strong><br><br>
+    <strong>Assunto:</strong> Desconto de Benefícios – Rescisão – [Nome do Colaborador]<br><br>
+    Cristina,<br><br>
+    Segue o cálculo de desconto de benefícios (VT/VR) referente à rescisão do colaborador [NOME DO COLABORADOR].<br><br>
+    Dias comprados VT: [XX] dias – Valor: R$ [XXX,XX]<br>
+    Dias comprados VR: [XX] dias – Valor: R$ [XXX,XX]<br>
+    Dias trabalhados: [XX] dias<br>
+    Total a descontar: R$ [XXX,XX]<br><br>
+    Atenciosamente.
+</div>
+
+<h3>3.2. Encaminhar documentos físicos para a Cris</h3>
+<p>Após enviar o e-mail, entregue fisicamente para a Cris os seguintes documentos:</p>
+<ul>
+    <li>Aviso de desligamento</li>
+    <li>Atestados do período atual</li>
+    <li>Exame demissional</li>
+</ul>
+
+<h2>4. FLUXO RESUMIDO</h2>
+<table>
+    <tr><th>Etapa</th><th>Ação</th></tr>
+    <tr><td>1</td><td>Tirar relatório de ponto (MD Comune)</td></tr>
+    <tr><td>2</td><td>Limpar relatório (excluir fins de semana e feriados)</td></tr>
+    <tr><td>3</td><td>Identificar dias trabalhados</td></tr>
+    <tr><td>4</td><td>Identificar dias comprados (VT/VR)</td></tr>
+    <tr><td>5</td><td>Calcular saldo a descontar</td></tr>
+    <tr><td>6</td><td>Preencher planilha</td></tr>
+    <tr><td>7</td><td>Enviar e-mail para a Cris</td></tr>
+    <tr><td>8</td><td>Entregar documentos físicos (aviso, atestados, exame)</td></tr>
+……
+
+<h2>5. OBSERVAÇÕES IMPORTANTES</h2>
+<ul>
+    <li>O valor do <strong>VT</strong> varia por colaborador (depende da tarifa do bilhete)</li>
+    <li>O valor do <strong>VR</strong> é fixo por dia (ex: R$ 25,00)</li>
+    <li><strong>Sábados, domingos e feriados NÃO entram na conta</strong> (benefícios não são comprados para esses dias)</li>
+    <li>O desconto deve ser aplicado na rescisão do colaborador</li>
+</ul>
+
+<div class="footer">
+    POP - Cálculo de Desconto de Benefícios na Rescisão | Comercial Maluli | Versão 1.0
+</div>
+
+</body>
+</html>

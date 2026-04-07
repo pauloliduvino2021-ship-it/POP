@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>POP - Tratamento de Atestado</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1000px; margin: 40px auto; padding: 20px; line-height: 1.6; background: #f5f7fa; }
+        h1 { color: #003366; border-bottom: 3px solid #003366; padding-bottom: 10px; }
+        h2 { color: #005599; margin-top: 30px; border-left: 5px solid #005599; padding-left: 15px; }
+        h3 { color: #0077aa; margin-top: 20px; }
+        .atencao { background: #fff3cd; border-left: 6px solid #ffc107; padding: 12px; margin: 20px 0; border-radius: 8px; }
+        .importante { background: #d9edf7; border-left: 6px solid #31708f; padding: 12px; margin: 20px 0; border-radius: 8px; }
+        .dica { background: #dff0d8; border-left: 6px solid #3c763d; padding: 12px; margin: 20px 0; border-radius: 8px; }
+        .footer { margin-top: 40px; font-size: 12px; text-align: center; border-top: 1px solid #ccc; padding-top: 15px; color: #666; }
+        ul, ol { margin: 10px 0 15px 25px; }
+        li { margin: 6px 0; }
+        .passo { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin: 15px 0; }
+        .passo-numero { background: #003366; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 10px; }
+    </style>
+</head>
+<body>
+
+<h1>POP – Tratamento de Atestado no Sistema</h1>
+<p><strong>Código:</strong> POP.RH.004<br><strong>Versão:</strong> 1.0<br><strong>Responsável:</strong> Departamento Pessoal</p>
+
+<h2>1. RECEBIMENTO E ORGANIZAÇÃO INICIAL</h2>
+
+<h3>1.1 Receber o Atestado</h3>
+<ul>
+    <li>Por meio da caixa física</li>
+    <li>Via malote interno</li>
+    <li>Entregue diretamente pelo colaborador</li>
+</ul>
+
+<h3>1.2 Organizar a Documentação</h3>
+<ul>
+    <li>Ordenar os atestados em <strong>ordem alfabética</strong></li>
+    <li>Para colaboradores com múltiplos atestados (mais de um), <strong>grampear</strong> os documentos</li>
+</ul>
+
+<h2>2. ANÁLISE DE VALIDAÇÃO</h2>
+
+<h3>2.1 Verificação de Requisitos</h3>
+<p>Para cada atestado, confira os seguintes pontos:</p>
+<ul>
+    <li><strong>Assinatura do Responsável:</strong> O documento está assinado?</li>
+    <li><strong>Data do Atestado:</strong> A data do afastamento está preenchida e legível?</li>
+    <li><strong>CID:</strong> O código da Classificação Internacional de Doenças está informado? (somente em atestados)</li>
+    <li><strong>Autenticidade:</strong> O documento aparenta ser original e válido?</li>
+    <li><strong>Período de Apuração:</strong> A data da falta/atestado corresponde ao período vigente?</li>
+</ul>
+
+<div class="importante">
+    <strong>📌 IMPORTANTE:</strong> O período do cartão de ponto é do <strong>dia 15 de um mês ao dia 14 do mês seguinte</strong>.
+</div>
+
+<h3>2.2 ATENÇÃO: ATESTADO DE FILHO</h3>
+<div class="atencao">
+    Em caso de atestado de acompanhamento de filho(a), é imprescindível que o documento contenha o <strong>nome completo do colaborador</strong> responsável pelo acompanhamento.
+</div>
+
+<h3>2.3 REGRA ESPECIAL: ATESTADOS COM DOIS PERÍODOS</h3>
+<p>Caso o atestado cubra uma data que pertença a dois períodos de fechamento de ponto:</p>
+<ol>
+    <li>Tire uma <strong>cópia</strong> do atestado</li>
+    <li>Entregue a <strong>via original</strong> para a Cris, junto com os demais atestados do período atual</li>
+    <li>Guarde a <strong>cópia</strong> em local apropriado para ser utilizada na apuração do próximo período</li>
+</ol>
+
+<h2>3. LANÇAMENTO INICIAL NO SISTEMA (MD COMUNE)</h2>
+
+<h3>3.1 Acessar o Sistema</h3>
+<ul>
+    <li>Entre no sistema <strong>MD Comune</strong> pelo Departamento Pessoal</li>
+</ul>
+
+<h3>3.2 Localizar o Colaborador</h3>
+<ul>
+    <li>Utilize a busca para encontrar o funcionário</li>
+</ul>
+
+<h3>3.3 Justificar a Falta/Atraso (Primeiro Passo)</h3>
+<ul>
+    <li>Verifique a data da falta ou atraso</li>
+    <li><strong>Ação:</strong> Retirar do Banco de Horas</li>
+</ul>
+
+<div class="dica">
+    <strong>💡 INSTRUÇÃO VISUAL:</strong> Certifique-se de que o sistema está no <strong>layout escuro</strong>. A opção <strong>"Remover Justificativa"</strong> deve ser utilizada para retirar a falta do banco de horas. Após a confirmação, a informação "sobe" e o campo referente ao dia deve ficar em branco.
+</div>
+
+<h2>4. TRATAMENTO DETALHADO NO SISTEMA</h2>
+<p>Com o MD Comune aberto, iremos identificar primeiramente se estamos tratando <strong>atestado</strong> ou <strong>declaração de horas</strong>.</p>
+
+<div class="passo">
+    <strong><span class="passo-numero">4.1</span> CASO 1: ATESTADO COM ABONO DO DIA TODO</strong>
+    <ol>
+        <li>Entre no perfil do colaborador</li>
+        <li>No menu esquerdo, abaixo da foto do colaborador, clique em <strong>"Faltas e Atrasos"</strong></li>
+        <li>Visualize as ocorrências do colaborador no período atual</li>
+        <li>Como já retiramos do banco de horas, os dias de ausência aparecerão em branco na parte superior</li>
+        <li>Com o atestado em mãos, selecione os dias citados no documento</li>
+        <li>Clique em <strong>"Justificar"</strong></li>
+        <li>No menu que abrir, a justificativa já virá automaticamente como <strong>"Abono Atestado/Declaração"</strong></li>
+        <li>Verifique se está tudo correto e clique no botão verde <strong>"Justificar"</strong></li>
+        <li>O sistema calculará o tratamento automaticamente</li>
+    </ol>
+    <div class="dica">
+        ✅ <strong>PRONTO!</strong> Seu tratamento de atestado que abona o dia todo está concluído.
+    </div>
+</div>
+
+<div class="passo">
+    <strong><span class="passo-numero">4.2</span> CASO 2: DECLARAÇÃO MÉDICA DE HORAS</strong>
+    
+    <h4>Informações Necessárias:</h4>
+    <ul>
+        <li>Qual horário de entrada e saída do colaborador diariamente?</li>
+        <li>Ele saiu mais cedo ou entrou mais tarde?</li>
+        <li>Qual horário ele entrou no dia da declaração?</li>
+    </ul>
+    
+    <h4>Entendendo o Cálculo:</h4>
+    <div class="importante">
+        O colaborador pode ter vindo trabalhar, mas pode ter atrasado no café, no almoço ou ter saído mais cedo. Nós vamos <strong>abonar somente o horário e o trajeto citado na declaração</strong>.
+    </div>
+    
+    <h4>Exemplo Prático:</h4>
+    <ul>
+        <li>Colaborador tem 2h17min de atraso</li>
+        <li>Declaração é das 07:15 às 07:49</li>
+        <li>Ele entrou às 09:30 (2h30min de atraso total)</li>
+        <li>O sistema mostra apenas 2h17 para abono porque o colaborador tem 15 min de café (abono automático)</li>
+    </ul>
+    
+    <h4>Passo a Passo para Tratamento da Declaração:</h4>
+    <ol>
+        <li>Entre no perfil do colaborador</li>
+        <li>Acesse <strong>"Faltas e Atrasos"</strong> (menu esquerdo abaixo da foto)</li>
+        <li>Visualize as ocorrências - na parte superior (branca) já está retirado do banco de horas</li>
+        <li>Clique no dia da ocorrência</li>
+        <li>Clique no botão <strong>"Justificar"</strong></li>
+    </ol>
+    
+    <h4>Abonar as Horas Corretas:</h4>
+    <ol start="6">
+        <li>No menu de justificativa, localize a parte abaixo do campo "CID"</li>
+        <li>Selecione a opção <strong>"Horas"</strong> (em vez de 100% do dia)</li>
+        <li>Abaixo, aparecerá a opção para informar quantas horas abonar</li>
+        <li>No exemplo: abonar <strong>02:30</strong> (preencha o campo com as horas necessárias)</li>
+        <li>Clique no botão verde <strong>"Justificar"</strong></li>
+    </ol>
+    <div class="dica">✅ <strong>DECLARAÇÃO ABONADA!</strong></div>
+    
+    <h4>Descontar o Restante das Horas:</h4>
+    <ol start="11">
+        <li>Ainda na tela de ocorrências, clique novamente no dia do atraso</li>
+        <li>Clique em <strong>"Justificar"</strong></li>
+        <li>No menu de justificativa, clique sobre a justificativa atual</li>
+        <li>Procure e selecione a opção: <strong>"Atraso/Falta - Debitar BH"</strong></li>
+        <li>Clique no botão verde <strong>"Justificar"</strong></li>
+    </ol>
+    <div class="dica">✅ <strong>PRONTO!</strong> Você tratou uma declaração, abonou as horas corretas e descontou os atrasos restantes.</div>
+</div>
+
+<h2>5. FINALIZAÇÃO E ENCAMINHAMENTO</h2>
+
+<h3>5.1 Conferência Final</h3>
+<p>Refaça a checagem dos itens obrigatórios:</p>
+<ul>
+    <li>Data correta?</li>
+    <li>CID informado? (para atestados)</li>
+    <li>Assinatura do gestor presente?</li>
+    <li>(Para atestado de filho) Nome do colaborador visível?</li>
+</ul>
+
+<h3>5.2 Visto e Encaminhamento</h3>
+<ul>
+    <li>Dê o seu <strong>"visto"</strong> no documento</li>
+    <li>O tratamento no sistema já foi realizado conforme os passos 4.1 ou 4.2</li>
+</ul>
+
+<h3>5.3 Em Caso de Inconsistência</h3>
+<ul>
+    <li>Se algum dos requisitos de validação não estiver conforme, <strong>verifique com a Cris</strong> antes de prosseguir</li>
+</ul>
+
+<h3>5.4 Encerramento do Período</h3>
+<ul>
+    <li>Ao final, elabore a <strong>capa do período</strong></li>
+    <li>Verifique toda a documentação mais uma vez</li>
+    <li>Entregue o consolidado para a <strong>Cris</strong></li>
+</ul>
+
+<div class="footer">
+    POP - Tratamento de Atestado | Comercial Maluli | Versão 1.0
+</div>
+
+</body>
+</html>

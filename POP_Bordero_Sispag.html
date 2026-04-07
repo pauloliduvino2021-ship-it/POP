@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>POP - Borderô e Geração Sispag (CNAB) com Validação Itaú</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 20px; line-height: 1.6; }
+        h1 { color: #003366; border-bottom: 3px solid #003366; padding-bottom: 10px; }
+        h2 { color: #005599; margin-top: 30px; border-left: 5px solid #005599; padding-left: 15px; }
+        h3 { color: #0077aa; margin-top: 20px; }
+        .atencao { background: #fff3cd; border-left: 6px solid #ffc107; padding: 12px; margin: 20px 0; border-radius: 5px; }
+        .importante { background: #d9edf7; border-left: 6px solid #31708f; padding: 12px; margin: 20px 0; border-radius: 5px; }
+        .dica { background: #dff0d8; border-left: 6px solid #3c763d; padding: 12px; margin: 20px 0; border-radius: 5px; }
+        .footer { margin-top: 40px; font-size: 12px; text-align: center; border-top: 1px solid #ccc; padding-top: 15px; color: #666; }
+        code { background: #eee; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+        ul, ol { margin: 10px 0 15px 25px; }
+        li { margin: 6px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        td, th { border: 1px solid #ccc; padding: 8px; vertical-align: top; }
+        th { background: #e6e6e6; }
+    </style>
+</head>
+<body>
+
+<h1>POP – Geração de Borderô e Arquivo CNAB (Sispag) no Protheus com Validação Itaú</h1>
+
+<p><strong>Código:</strong> POP.CP.001<br>
+<strong>Versão:</strong> 1.0<br>
+<strong>Responsável:</strong> Financeiro / Contas a Pagar</p>
+
+<h2>1. Objetivo</h2>
+<p>Padronizar o processo de geração de borderôs de pagamento no módulo de Contas a Pagar do Protheus, bem como a geração, transmissão e validação do processamento do arquivo de remessa CNAB (Sispag) no Itaú.</p>
+
+<h2>2. Acesso ao Sistema Protheus</h2>
+<ul>
+    <li>Acesse o módulo <strong>Contas a Pagar</strong> no Protheus.</li>
+    <li>Selecione a <strong>Filial desejada</strong>.</li>
+    <li>Informe o <strong>Ambiente 06</strong> e confirme.</li>
+</ul>
+
+<h2>3. Criação do Filtro por Data de Vencimento</h2>
+<ol>
+    <li>No menu lateral esquerdo, navegue até: <code>Atualizações > Contas a Pagar > Funções Contas a Pagar</code>.</li>
+    <li>Na tela de Contas a Pagar, no canto superior direito, clique em <strong>Filtrar > Criar Filtro</strong>.</li>
+    <li>Para filtrar os títulos a serem pagos:
+        <ul>
+            <li>1ª Caixinha: Selecione <strong>"VENCIMENTO"</strong></li>
+            <li>2ª Caixinha: Selecione <strong>"IGUAL A"</strong></li>
+            <li>3ª Caixinha: Preencha com a <strong>data do agendamento</strong> do borderô</li>
+        </ul>
+    </li>
+    <li>Clique em <strong>Adicionar</strong>.</li>
+    <li>Após visualizar o filtro na lista abaixo, clique em <strong>Salvar</strong>.</li>
+    <li>No menu de Gerenciamento de Filtro, localize o filtro recém-criado, selecione-o e clique em <strong>Aplicar Filtro Selecionados</strong>.</li>
+</ol>
+
+<h2>4. Geração dos Borderôs</h2>
+<p>A geração deve ser feita separadamente por tipo de pagamento (modelo), seguindo a ordem abaixo.</p>
+
+<h3>4.1. Borderô Modelo 30 (Itaú)</h3>
+<ol>
+    <li>Com o filtro aplicado, clique em <strong>Outras Ações > Borderô > Borderô</strong>.</li>
+    <li>Selecione a filial <strong>"MATRIZ"</strong>.</li>
+    <li>Na tela "Borderô de Pagamentos", preencha:
+        <ul>
+            <li><strong>Nº Borderô:</strong> Utilizar o número sugerido automaticamente</li>
+            <li><strong>Vencimento Borderô:</strong> Data do filtro (início e fim com a mesma data)</li>
+            <li><strong>Banco:</strong> 341</li>
+            <li><strong>Agência:</strong> 0057</li>
+            <li><strong>Conta:</strong> 0020203</li>
+            <li><strong>Modelo:</strong> 30 (Itaú)</li>
+            <li><strong>Tipo de Documento:</strong> 20</li>
+        </ul>
+    </li>
+    <li>Clique em <strong>OK</strong>.</li>
+    <li>Na tela de seleção de Notas Fiscais (NF), clique em <strong>Selecionar Todas as NF</strong>.</li>
+    <li>Clique em <strong>Salvar</strong>.</li>
+    <li>No menu de índices, selecione a 1ª opção e clique em <strong>Salvar</strong>.</li>
+    <li>Na tela de validação, selecione <strong>"NÃO"</strong>.</li>
+    <li>Na tela de visualização do borderô, clique em <strong>Salvar</strong>.</li>
+</ol>
+
+<h3>4.2. Borderô Modelo 31 (Outros Bancos)</h3>
+<ul>
+    <li>A tela para criação de um novo borderô será exibida novamente.</li>
+    <li>Repita o processo do item 4.1, alterando apenas: <strong>Modelo: 31</strong> (Outros Bancos)</li>
+    <li><strong>Atenção:</strong> O número do borderô será gerado automaticamente de forma sequencial.</li>
+</ul>
+
+<h3>4.3. Borderô Modelo 13 (Concessionárias)</h3>
+<ul>
+    <li>Repita o processo do item 4.1, alterando apenas: <strong>Modelo: 13</strong> (Concessionárias)</li>
+</ul>
+
+<div class="atencao">
+    <strong>⚠️ OBSERVAÇÃO:</strong> Se ao tentar gerar o borderô modelo 13 aparecer a mensagem "não existem registros", clique em Fechar e prossiga. Isso indica que não há títulos para este tipo de pagamento.
+</div>
+
+<h2>5. Geração do Arquivo CNAB</h2>
+<ol>
+    <li>No menu de Contas a Pagar, clique em <strong>Outras Ações > CNAB > Gerar Arquivo</strong>.</li>
+    <li>Selecione a filial <strong>"MATRIZ"</strong>.</li>
+    <li>Na tela de parâmetros, preencha:
+        <ul>
+            <li><strong>Do Borderô:</strong> Número do primeiro borderô gerado</li>
+            <li><strong>Até o Borderô:</strong> Número do último borderô gerado</li>
+            <li><strong>Arq. de Configuração:</strong> 341e2pe</li>
+            <li><strong>Arq. de Saída:</strong> Caminho completo da pasta compartilhada, ex: \\servidor\sispag\</li>
+            <li><strong>Código Banco:</strong> 341</li>
+            <li><strong>Código Agência:</strong> 0057</li>
+            <li><strong>Código da Conta:</strong> 0020203</li>
+            <li><strong>Código da Subconta:</strong> 002</li>
+            <li><strong>Configuração CNAB:</strong> modelo2</li>
+            <li><strong>Considerar Filial Abaixo:</strong> Sim</li>
+            <li><strong>Da Filial:</strong> (deixar em branco)</li>
+            <li><strong>Até a Filial:</strong> ZZ</li>
+            <li><strong>Receita Bruta Acumulada:</strong> (deixar em branco)</li>
+            <li><strong>Selecionar Filiais:</strong> Sim</li>
+        </ul>
+    </li>
+    <li>Clique em <strong>OK</strong>.</li>
+    <li>Na tela "Geração Arquivo Envio", clique em <strong>Gerar Arquivo</strong>.</li>
+    <li>Selecione a filial <strong>"MATRIZ"</strong>, marque <strong>Selecionar Todas as NF</strong> e clique em <strong>Salvar</strong>.</li>
+    <li>No campo Arquivo de Saída, informe o nome do arquivo: <strong>duasispag</strong> (sem extensão).</li>
+</ol>
+
+<h2>6. Validação do Arquivo Gerado</h2>
+<ul>
+    <li>Acesse a pasta compartilhada <strong>sispag</strong>.</li>
+    <li>Localize o arquivo gerado (extensão <strong>.txt</strong>).</li>
+    <li>Abra o arquivo e confirme:
+        <ul>
+            <li>Código do banco (341) no cabeçalho</li>
+            <li>Quantidade de registros (deve corresponder aos títulos selecionados)</li>
+            <li>Fornecedores constantes no arquivo</li>
+        </ul>
+    </li>
+</ul>
+
+<h2>7. Transmissão no Itaú</h2>
+<ol>
+    <li>Acesse o sistema do Itaú.</li>
+    <li>No menu lateral esquerdo: <code>Mais Opções > Transmissão de Arquivos > Remessas > Enviar</code>.</li>
+    <li>Na tela "Envio de Arquivo Remessa em Produção":
+        <ul>
+            <li><strong>Produto:</strong> Selecione SISPAG</li>
+            <li><strong>Arquivo:</strong> Clique em Selecionar, localize o arquivo na pasta sispag e clique em Abrir</li>
+        </ul>
+    </li>
+    <li>Clique em <strong>Enviar</strong>.</li>
+    <li>Após o envio, a mensagem "arquivo remessa enviado com sucesso" será exibida.</li>
+    <li>Confirme os dados na tela.</li>
+    <li>Role até a opção <strong>Salvar Protocolo em PDF</strong>, salve o arquivo dentro da pasta sispag e clique em <strong>OK</strong>.</li>
+</ol>
+
+<h2>8. Validação do Processamento do Arquivo</h2>
+
+<h3>8.1. Consultar Status do Processamento</h3>
+<ul>
+    <li>Volte à tela inicial do Itaú.</li>
+    <li>No menu lateral esquerdo: <code>Mais Opções > Transmissão de Arquivos > Resultado do Processamento de Remessa > Consultar</code>.</li>
+</ul>
+
+<h3>8.2. Interpretar o Status</h3>
+<table>
+    <tr><th>Status</th><th>Significado</th><th>Ação</th></tr>
+    <tr><td>Recepção Normal</td><td>Arquivo recebido, aguardando processamento</td><td>Aguardar alguns minutos e consultar novamente</td></tr>
+    <tr><td>Processamento Normal</td><td>Arquivo processado com sucesso</td><td>Prosseguir para validação dos pagamentos</td></tr>
+    <tr><td>Processamento com Erro</td><td>Falha no processamento</td><td>Clique em Detalhar, verifique o erro e corrija antes de reenviar</td></tr>
+</table>
+
+<h2>9. Validação dos Pagamentos no Protheus</h2>
+<ol>
+    <li>No menu do Protheus: <code>Contas a Pagar > Consultar > Consultar Pagamentos Transferências e Pix</code>.</li>
+    <li>Preencha os filtros:
+        <ul>
+            <li>Marque: Conta em Operação, Fornecedores, Impostos e Tributo</li>
+            <li><strong>Tipo de Pagamento:</strong> Todos</li>
+            <li><strong>Status do Pagamento:</strong> Todos</li>
+            <li><strong>Tipo de Consulta:</strong> Detalhada</li>
+            <li><strong>Data:</strong> Período do agendamento</li>
+        </ul>
+    </li>
+    <li>Clique em <strong>Buscar Pagamentos</strong>.</li>
+    <li>Verifique o status dos documentos.</li>
+</ul>
+
+<div class="dica">
+    <strong>✅ DICA:</strong> Se o status for "Não Efetuado", clique no símbolo "+" ao lado para visualizar o detalhe do pagamento e identificar o motivo.
+</div>
+
+<div class="footer">
+    POP - Borderô e Geração Sispag (CNAB) | Comercial Maluli | Versão 1.0
+</div>
+
+</body>
+</html>

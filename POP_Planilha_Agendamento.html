@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>POP - Planilha de Agendamento - Itaú</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 20px; line-height: 1.6; }
+        h1 { color: #003366; border-bottom: 3px solid #003366; padding-bottom: 10px; }
+        h2 { color: #005599; margin-top: 30px; border-left: 5px solid #005599; padding-left: 15px; }
+        h3 { color: #0077aa; margin-top: 20px; }
+        .atencao { background: #fff3cd; border-left: 6px solid #ffc107; padding: 12px; margin: 20px 0; border-radius: 5px; }
+        .importante { background: #d9edf7; border-left: 6px solid #31708f; padding: 12px; margin: 20px 0; border-radius: 5px; }
+        .dica { background: #dff0d8; border-left: 6px solid #3c763d; padding: 12px; margin: 20px 0; border-radius: 5px; }
+        .footer { margin-top: 40px; font-size: 12px; text-align: center; border-top: 1px solid #ccc; padding-top: 15px; color: #666; }
+        code { background: #eee; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+        ul, ol { margin: 10px 0 15px 25px; }
+        li { margin: 6px 0; }
+    </style>
+</head>
+<body>
+
+<h1>POP – Planilha de Agendamento – Itaú</h1>
+
+<p><strong>Código:</strong> POP.CP.003<br>
+<strong>Versão:</strong> 1.0<br>
+<strong>Responsável:</strong> Financeiro / Contas a Pagar</p>
+
+<h2>1. Objetivo</h2>
+<p>Padronizar a emissão da planilha de agendamentos no Itaú, bem como o envio do relatório diário por e-mail para os destinatários, garantindo a conferência dos pagamentos agendados e o correto armazenamento do arquivo.</p>
+
+<h2>2. Acesso ao Sistema Itaú</h2>
+<ol>
+    <li>Acesse o sistema do Itaú.</li>
+    <li>No menu lateral esquerdo, clique em <strong>"Contas a Pagar"</strong>.</li>
+    <li>Clique em <strong>"Ir para Contas a Pagar"</strong>.</li>
+    <li>Clique em <strong>"Consultar"</strong>.</li>
+    <li>Clique em <strong>"Consultar Pagamentos Transferência e Pix"</strong>.</li>
+</ol>
+
+<h2>3. Filtros para Emissão do Relatório</h2>
+<p>Na tela de consulta, marque as seguintes opções:</p>
+<ul>
+    <li>✅ Conta em Operação</li>
+    <li>✅ Fornecedores</li>
+    <li>✅ Impostos e Tributos</li>
+</ul>
+
+<p>Preencha os demais campos conforme abaixo:</p>
+<ul>
+    <li><strong>Tipo de Pagamentos:</strong> Todos</li>
+    <li><strong>Status do Pagamento:</strong> A Efetuar</li>
+    <li><strong>Tipo de Consulta:</strong> Detalhada</li>
+    <li><strong>Data:</strong> Outras Datas ou Períodos</li>
+    <li><strong>Filtro de Data:</strong> Data do dia atual até a data do último agendamento</li>
+</ul>
+
+<p>Após preencher, clique em <strong>"Buscar Pagamentos"</strong>.</p>
+
+<h2>4. Exportação do Relatório para Excel</h2>
+<ol>
+    <li>Após aparecer o resultado da pesquisa, filtre da data menor até a data maior utilizando a seta para ordenação localizada acima dos dias.</li>
+    <li><strong>Importante:</strong> Vá até a <strong>última página</strong> da pesquisa, independentemente de quantas páginas houver.</li>
+    <li>Somente após acessar a última página do resultado, clique em <strong>"Salvar em Excel"</strong>.</li>
+    <li>Desta forma, <strong>todo o relatório</strong> será salvo corretamente.</li>
+</ol>
+
+<div class="atencao">
+    <strong>⚠️ ATENÇÃO:</strong> Ir até a última página é fundamental para garantir que todos os registros sejam exportados!
+</div>
+
+<h2>5. Salvamento do Arquivo</h2>
+<p>Salve o arquivo na pasta compartilhada:</p>
+<p><code>ADM / CONTAS A PAGAR</code></p>
+
+<p><strong>Regras para nome do arquivo:</strong></p>
+<ul>
+    <li>Utilize o nome padrão conforme já estabelecido na pasta.</li>
+    <li>Obedeça a ordem dos períodos.</li>
+</ul>
+
+<h2>6. Envio do E-mail Diário</h2>
+<p>O relatório deve ser enviado <strong>diariamente</strong> para os destinatários.</p>
+
+<p><strong>Destinatários:</strong></p>
+<ul>
+    <li><strong>Para (To):</strong> Cristina Pietro - Adm Maluli - <code>adm@comercialmaluli.com.br</code></li>
+    <li><strong>Com cópia (CC):</strong> <code>financeiro@comercialmaluli.com.br</code></li>
+</ul>
+
+<h3>Corpo do e-mail (padrão):</h3>
+<div class="importante">
+    <p>Prezados,</p>
+    <p>Segue em anexo, os relatórios de agendamentos para autorização.</p>
+    <p>Obs: O saldo atual no Itaú é de R$ <strong>[XXX.XXX,XX]</strong> e a previsão de pagamento até dia <strong>XX/XX/XXXX</strong> é de R$ <strong>[XXX.XXX,XX]</strong>.</p>
+    <p>Atenciosamente.</p>
+</div>
+
+<p><strong>Regras do e-mail:</strong></p>
+<ul>
+    <li>O e-mail deve conter o anexo da planilha</li>
+    <li>Informar o saldo atual do banco</li>
+    <li>Informar a data dos agendamentos</li>
+    <li>Informar o saldo dos agendamentos</li>
+    <li>Seguir sempre o e-mail padrão conforme modelo acima</li>
+</ul>
+
+<h2>7. Validação Diária dos Pagamentos</h2>
+<p>Após emitir e enviar o relatório, realize a validação diária dos pagamentos:</p>
+<ol>
+    <li>Volte ao Itaú.</li>
+    <li>No menu lateral esquerdo, clique em <strong>"Contas a Pagar"</strong>.</li>
+    <li>Clique em <strong>"Ir para Contas a Pagar"</strong>.</li>
+    <li>Clique em <strong>"Consultar"</strong>.</li>
+    <li>Clique em <strong>"Consultar Pagamentos Transferência e Pix"</strong>.</li>
+    <li>Na tela de consulta, marque as seguintes opções:
+        <ul>
+            <li>✅ Conta em Operação</li>
+            <li>✅ Fornecedores</li>
+            <li>✅ Impostos e Tributos</li>
+        </ul>
+    </li>
+    <li>Preencha os campos:
+        <ul>
+            <li><strong>Tipo de Pagamentos:</strong> Todos</li>
+            <li><strong>Status do Pagamento:</strong> Todos</li>
+            <li><strong>Tipo de Consulta:</strong> Detalhada</li>
+            <li><strong>Data:</strong> Hoje</li>
+        </ul>
+    </li>
+    <li>Clique em <strong>"Buscar Pagamentos"</strong>.</li>
+</ol>
+
+<p><strong>Objetivo da validação:</strong> Visualizar os pagamentos do dia atual e, caso ocorra algum erro, verificar o motivo com antecedência.</p>
+
+<h2>8. Frequência</h2>
+<div class="atencao">
+    <strong>⏱️ Este procedimento deve ser realizado DIARIAMENTE.</strong>
+</div>
+
+<h2>9. Fluxo Resumo do Processo</h2>
+<ol>
+    <li>Acessar Itaú → Contas a Pagar → Consultar Pagamentos Transferência e Pix</li>
+    <li>Aplicar filtros (Status: A Efetuar / Período: dia atual até último agendamento)</li>
+    <li>Buscar pagamentos</li>
+    <li>Ordenar por data</li>
+    <li>Ir até a última página</li>
+    <li>Salvar em Excel</li>
+    <li>Salvar arquivo na pasta ADM / CONTAS A PAGAR</li>
+    <li>Enviar e-mail padrão com anexo para os destinatários</li>
+    <li>Validar pagamentos do dia atual (Status: Todos / Data: Hoje)</li>
+    <li>Verificar possíveis erros com antecedência</li>
+</ol>
+
+<div class="dica">
+    <strong>✅ DICA:</strong> Mantenha um modelo de e-mail salvo no seu rascunho para agilizar o envio diário!
+</div>
+
+<div class="footer">
+    POP - Planilha de Agendamento - Itaú | Comercial Maluli | Versão 1.0
+</div>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>POP - Relatório de Baixa de Fornecedor</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 20px; line-height: 1.6; }
+        h1 { color: #003366; border-bottom: 3px solid #003366; padding-bottom: 10px; }
+        h2 { color: #005599; margin-top: 30px; border-left: 5px solid #005599; padding-left: 15px; }
+        h3 { color: #0077aa; margin-top: 20px; }
+        .atencao { background: #fff3cd; border-left: 6px solid #ffc107; padding: 12px; margin: 20px 0; border-radius: 5px; }
+        .importante { background: #d9edf7; border-left: 6px solid #31708f; padding: 12px; margin: 20px 0; border-radius: 5px; }
+        .dica { background: #dff0d8; border-left: 6px solid #3c763d; padding: 12px; margin: 20px 0; border-radius: 5px; }
+        .footer { margin-top: 40px; font-size: 12px; text-align: center; border-top: 1px solid #ccc; padding-top: 15px; color: #666; }
+        code { background: #eee; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+        ul, ol { margin: 10px 0 15px 25px; }
+        li { margin: 6px 0; }
+    </style>
+</head>
+<body>
+
+<h1>POP – Relatório de Baixa de Fornecedor</h1>
+
+<p><strong>Código:</strong> POP.FISCAL.003<br>
+<strong>Versão:</strong> 1.0<br>
+<strong>Responsável:</strong> Fiscal / Apoio Administrativo</p>
+
+<h2>Objetivo</h2>
+<p>Este documento tem como objetivo padronizar a emissão do <strong>Relatório de Baixa de Fornecedor</strong> no Protheus, garantindo a conferência diária dos valores baixados e o correto armazenamento do arquivo.</p>
+
+<h2>Acesso ao Sistema</h2>
+<ol>
+    <li>Acesse o Protheus.</li>
+    <li>Selecione o Ambiente Financeiro <strong>"06"</strong>.</li>
+    <li>Selecione a Filial <strong>"MATRIZ"</strong>.</li>
+</ol>
+
+<h2>Emissão do Relatório</h2>
+<ol>
+    <li>No menu lateral, navegue até: <code>Relatório > Contas a Pagar ADM > ADM Geral Contas a Pagar</code>.</li>
+    <li>Na tela de parâmetros que abrir, selecione as opções:
+        <ul>
+            <li><strong>Tipo de Impressão:</strong> VIA APOOL</li>
+            <li><strong>Formato:</strong> PAISAGEM</li>
+            <li><strong>Ambiente:</strong> CLIENTE</li>
+            <li><strong>Opções:</strong> PDF</li>
+        </ul>
+    </li>
+    <li>Clique em <strong>"Parâmetro"</strong>.</li>
+    <li>Preencha os campos:
+        <ul>
+            <li><strong>Vencimento:</strong> Data que deseja para o relatório (início e fim)</li>
+            <li><strong>Prefixo Diferente de:</strong> ICM</li>
+            <li><strong>Do Bco Pgt:</strong> (deixar em branco)</li>
+            <li><strong>Até Bco Pgt:</strong> ZZ</li>
+        </ul>
+    </li>
+    <li>Clique em <strong>"OK"</strong> e em <strong>"OK"</strong> novamente.</li>
+    <li>Na tela de impressão, selecione a orientação <strong>"RETRATO"</strong>.</li>
+    <li>Clique em <strong>"Salvar"</strong>.</li>
+</ol>
+
+<h2>Salvamento do Arquivo</h2>
+<p>Salve o arquivo no seguinte destino:</p>
+<p><code>FISCAL E CONTABIL / RELATORIO DE CONFERENCIA / RELATORIO DE BAIXAS / (ANO ATUAL) / (MES ATUAL)</code></p>
+
+<h3>Regras para nome do arquivo:</h3>
+<ul>
+    <li>Renomeie o arquivo com o <strong>nome do dia</strong> do relatório.</li>
+</ul>
+
+<h2>Validação do Relatório</h2>
+<ul>
+    <li>No final do relatório, <strong>verifique os valores</strong>.</li>
+    <li>Os valores devem estar <strong>ZERADOS</strong>.</li>
+    <li><strong>Observação:</strong> O fornecedor "ETILUX" é pago via cheque.</li>
+</ul>
+
+<div class="atencao">
+    <strong>⏱️ FREQUÊNCIA:</strong> Este relatório deve ser emitido <strong>DIARIAMENTE</strong>.
+</div>
+
+<div class="dica">
+    <strong>✅ Dica de conferência:</strong> Sempre verifique se os valores no final do relatório estão zerados antes de arquivar.
+</div>
+
+<div class="footer">
+    POP - Relatório de Baixa de Fornecedor | Comercial Maluli | Versão 1.0
+</div>
+
+</body>
+</html>

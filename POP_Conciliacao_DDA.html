@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>POP - Conciliação DDA Itaú</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 20px; line-height: 1.6; }
+        h1 { color: #003366; border-bottom: 3px solid #003366; padding-bottom: 10px; }
+        h2 { color: #005599; margin-top: 30px; border-left: 5px solid #005599; padding-left: 15px; }
+        h3 { color: #0077aa; margin-top: 20px; }
+        .atencao { background: #fff3cd; border-left: 6px solid #ffc107; padding: 12px; margin: 20px 0; border-radius: 5px; }
+        .importante { background: #d9edf7; border-left: 6px solid #31708f; padding: 12px; margin: 20px 0; border-radius: 5px; }
+        .dica { background: #dff0d8; border-left: 6px solid #3c763d; padding: 12px; margin: 20px 0; border-radius: 5px; }
+        .footer { margin-top: 40px; font-size: 12px; text-align: center; border-top: 1px solid #ccc; padding-top: 15px; color: #666; }
+        code { background: #eee; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+        ul, ol { margin: 10px 0 15px 25px; }
+        li { margin: 6px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        td, th { border: 1px solid #ccc; padding: 8px; vertical-align: top; }
+        th { background: #e6e6e6; }
+    </style>
+</head>
+<body>
+
+<h1>POP – Conciliação DDA Itaú</h1>
+
+<p><strong>Código:</strong> POP.CP.002<br>
+<strong>Versão:</strong> 1.0<br>
+<strong>Responsável:</strong> Financeiro / Contas a Pagar</p>
+
+<h2>1. Objetivo</h2>
+<p>Padronizar o processo de conciliação DDA (Débito Direto Autorizado) no Itaú e no Protheus, garantindo a correta recepção dos arquivos de retorno, a conciliação dos títulos no sistema e a inserção manual de código de barras quando necessário.</p>
+
+<h2>2. Acesso ao Sistema Itaú – Recepção do Arquivo de Retorno</h2>
+<ol>
+    <li>Acesse o sistema do Itaú.</li>
+    <li>No menu lateral esquerdo, clique em <strong>"Mais Opções"</strong>.</li>
+    <li>Navegue até: <code>Transmissão de Arquivos > Retorno > Recepcionar</code>.</li>
+    <li>Selecione a opção <strong>"Varredura do Sacado"</strong>.</li>
+    <li>Identifique todos os arquivos que estiverem disponíveis para recepção.</li>
+    <li>Clique em <strong>"Salvar"</strong> para realizar o download dos arquivos.</li>
+    <li>Destino dos arquivos: Salve na pasta compartilhada:<br>
+    <code>ADM > CNAB > VARRE > (pasta atual)</code></li>
+    <li>Após o processamento do arquivo, mova-o para a pasta:<br>
+    <code>ADM > CNAB > VARRE > PROCESSADOS</code></li>
+</ol>
+
+<h2>3. Acesso ao Sistema Protheus – Conciliação DDA</h2>
+<ol>
+    <li>Acesse o módulo <strong>Contas a Pagar</strong> no Protheus.</li>
+    <li>Selecione a Filial <strong>"01"</strong>.</li>
+    <li>Informe o Ambiente <strong>"06"</strong> e confirme.</li>
+    <li>No menu lateral, navegue até:<br>
+    <code>Atualizações > Comunicação Bancária > Conciliação DDA</code>.</li>
+    <li>Na tela de conciliação, clique em <strong>"+ Conciliar"</strong>.</li>
+    <li>Sempre selecione a opção <strong>"MATRIZ"</strong>.</li>
+    <li>Clique em <strong>"Parâmetros"</strong>.</li>
+    <li>Preencha os campos conforme abaixo:
+        <ul>
+            <li><strong>Considerar Filiais Abaixo:</strong> Sim</li>
+            <li><strong>Filial de:</strong> (deixar em branco)</li>
+            <li><strong>Filial até:</strong> ZZ</li>
+            <li><strong>Fornecedor de:</strong> (deixar em branco)</li>
+            <li><strong>Fornecedor até:</strong> ZZ</li>
+            <li><strong>Loja de:</strong> (deixar em branco)</li>
+            <li><strong>Loja até:</strong> ZZ</li>
+            <li><strong>Considerar DT Vencimento:</strong> Vencimento Real</li>
+            <li><strong>Filtro de Data:</strong> Geralmente 1 mês para frente</li>
+            <li><strong>Dias a Avançar:</strong> 3</li>
+            <li><strong>Dias a Retroceder:</strong> 3</li>
+            <li><strong>Diferença Menor:</strong> 0,05</li>
+            <li><strong>Diferença Maior:</strong> 0,05</li>
+        </ul>
+    </li>
+    <li>Após preencher, clique em <strong>"OK"</strong> e em <strong>"OK"</strong> novamente.</li>
+    <li>No pop-up que abrir, clique em <strong>"Fechar"</strong>.</li>
+    <li>Você será direcionado à tela da Conciliação DDA. No final da tela, clique em <strong>"OK"</strong>.</li>
+    <li>Feche a tela de conciliação.</li>
+</ol>
+
+<h2>4. Acesso ao Sistema Protheus – Criação do Filtro e Verificação dos Títulos</h2>
+<ol>
+    <li>No início do Protheus, vá até a aba <strong>Contas a Pagar</strong>.</li>
+    <li>Clique em <strong>Funções Contas a Pagar</strong>.</li>
+    <li>Na tela de contas a pagar, clique em <strong>"Filtrar" > "Criar Filtro"</strong>.</li>
+    <li>Preencha o filtro:
+        <ul>
+            <li>1ª Caixinha: <strong>VENCIMENTO</strong></li>
+            <li>2ª Caixinha: <strong>IGUAL A</strong></li>
+            <li>Expressão: Data que deseja fazer o agendamento</li>
+        </ul>
+    </li>
+    <li>Clique em <strong>"Adicionar"</strong> e depois em <strong>"Salvar"</strong>.</li>
+    <li>Selecione o filtro criado e clique em <strong>"Aplicar Filtro Selecionados"</strong>.</li>
+</ol>
+
+<h2>5. Inserção Manual do Código de Barras (quando não for inserido automaticamente)</h2>
+
+<h3>5.1. Obter o Código de Barras no Itaú</h3>
+<ol>
+    <li>Acesse o sistema do Itaú.</li>
+    <li>No menu lateral, vá até:<br>
+    <code>Contas a Pagar > Ir para Contas a Pagar > Consulta e Pagamentos do Boleto > Boletos Recebidos</code>.</li>
+    <li>Preencha os filtros:
+        <ul>
+            <li><strong>Visualizar Boletos:</strong> Preencha o CNPJ da Matriz: 51669307/0001-10</li>
+            <li><strong>Agregado:</strong> Todos</li>
+            <li><strong>Status:</strong> A vencer</li>
+            <li><strong>Período do Vencimento:</strong> Período do agendamento</li>
+        </ul>
+    </li>
+    <li>Clique em <strong>"Buscar"</strong>.</li>
+    <li>Identifique e clique sobre a DDA que deseja inserir o código de barras.</li>
+    <li>Com os detalhes do boleto abertos, <strong>copie o código de barras</strong>.</li>
+    <li>Antes de colar no Protheus, <strong>remova todos os espaçamentos e pontos</strong> do código copiado.</li>
+</ol>
+
+<h3>5.2. Inserir o Código de Barras no Protheus</h3>
+<ol>
+    <li>No Protheus, localize o título que deseja inserir o código de barras.</li>
+    <li>Clique sobre o título e vá até <strong>Contas a Pagar > Alterar</strong>.</li>
+    <li>No campo <strong>"Linha Digitável"</strong>, cole o código de barras <strong>sem espaços e sem pontos</strong>.</li>
+    <li>Dê <strong>"Enter"</strong> para confirmar.</li>
+    <li>Confirme que:
+        <ul>
+            <li>O campo <strong>Código de Barras</strong> foi preenchido automaticamente</li>
+            <li>O campo <strong>Forma de Pagamento</strong> está preenchido corretamente</li>
+        </ul>
+    </li>
+    <li>Clique em <strong>"Salvar"</strong>.</li>
+</ol>
+
+<h2>6. Observações Importantes</h2>
+<ul>
+    <li>Quando for pagamento de <strong>concessionária</strong>, alterar a Forma de Pagamento para <strong>"13"</strong> antes de gerar o borderô de pagamento.</li>
+    <li>Sempre verificar se o código de barras foi preenchido corretamente antes de salvar o título.</li>
+    <li>Após a conciliação e inserção dos códigos de barras, o processo de geração do borderô de pagamento pode ser realizado normalmente.</li>
+</ul>
+
+<h2>7. Fluxo Resumo do Processo</h2>
+<ol>
+    <li>Recepcionar arquivos de retorno no Itaú (Varredura do Sacado)</li>
+    <li>Mover arquivos para pasta de processados</li>
+    <li>Realizar conciliação DDA no Protheus (Filial 01, Ambiente 06)</li>
+    <li>Criar filtro por data de vencimento no Contas a Pagar</li>
+    <li>Verificar títulos e inserir códigos de barras manualmente quando necessário</li>
+    <li>Gerar borderô de pagamento conforme procedimento padrão</li>
+</ol>
+
+<div class="dica">
+    <strong>✅ DICA:</strong> Sempre remova espaços e pontos do código de barras antes de colar no Protheus!
+</div>
+
+<div class="footer">
+    POP - Conciliação DDA Itaú | Comercial Maluli | Versão 1.0
+</div>
+
+</body>
+</html>

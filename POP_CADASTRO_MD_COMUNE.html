@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>POP - Cadastro MD Comune</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1000px; margin: 40px auto; padding: 20px; line-height: 1.6; background: #f5f7fa; }
+        h1 { color: #003366; border-bottom: 3px solid #003366; padding-bottom: 10px; }
+        h2 { color: #005599; margin-top: 30px; border-left: 5px solid #005599; padding-left: 15px; }
+        h3 { color: #0077aa; margin-top: 20px; }
+        .atencao { background: #fff3cd; border-left: 6px solid #ffc107; padding: 12px; margin: 20px 0; border-radius: 8px; }
+        .importante { background: #d9edf7; border-left: 6px solid #31708f; padding: 12px; margin: 20px 0; border-radius: 8px; }
+        .dica { background: #dff0d8; border-left: 6px solid #3c763d; padding: 12px; margin: 20px 0; border-radius: 8px; }
+        .footer { margin-top: 40px; font-size: 12px; text-align: center; border-top: 1px solid #ccc; padding-top: 15px; color: #666; }
+        ul, ol { margin: 10px 0 15px 25px; }
+        li { margin: 6px 0; }
+        .passo { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin: 15px 0; }
+        .passo-numero { background: #003366; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 10px; }
+        .checklist { list-style: none; padding-left: 0; }
+        .checklist li:before { content: "☐ "; font-size: 16px; }
+    </style>
+</head>
+<body>
+
+<h1>POP – Cadastro de Colaborador no MD Comune</h1>
+<p><strong>Código:</strong> POP.RH.011<br><strong>Versão:</strong> 1.0<br><strong>Responsável:</strong> Departamento Pessoal</p>
+
+<h2>1. DOCUMENTOS E INFORMAÇÕES OBRIGATÓRIAS</h2>
+<p>Antes de iniciar o cadastro, tenha em mãos:</p>
+<ul>
+    <li>Nome completo do colaborador</li>
+    <li>Data de admissão</li>
+    <li>Foto 3x4 (digital)</li>
+    <li>E-mail do colaborador</li>
+    <li>CPF (somente números)</li>
+    <li>PIS (somente números)</li>
+    <li>Ficha de pré-cadastro com informações do gestor, local de trabalho, horário e tipo de contratação</li>
+</ul>
+
+<div class="importante">
+    <strong>📌 ATENÇÃO:</strong> Preencha <strong>apenas os campos citados</strong> neste documento. Os demais campos devem permanecer em branco.
+</div>
+
+<h2>2. ACESSANDO O CADASTRO DE NOVA PESSOA</h2>
+<ul>
+    <li>Abra o sistema <strong>MD Comune</strong></li>
+    <li>Na tela inicial, localize e clique na opção <strong>"Nova Pessoa"</strong> (caixinha na cor VERDE)</li>
+</ul>
+
+<h2>3. PREENCHENDO OS DADOS CADASTRAIS</h2>
+<ul class="checklist">
+    <li><strong>Inserir foto:</strong> Clique para adicionar a foto 3x4 do colaborador (a foto só será exibida após salvar o cadastro)</li>
+    <li><strong>Nome:</strong> Preencha com o nome completo do colaborador</li>
+    <li><strong>Sexo:</strong> Selecione a opção correspondente</li>
+    <li><strong>CPF:</strong> Digite o CPF (somente números, sem pontos ou traços)</li>
+    <li><strong>PIS:</strong> Digite o PIS (somente números, sem pontos ou traços)</li>
+    <li><strong>Data de Admissão:</strong> Preencha com a data correta</li>
+    <li><strong>E-mail:</strong> Digite o e-mail do colaborador</li>
+</ul>
+
+<div class="dica">
+    <strong>💡 OBSERVAÇÃO:</strong> Este e-mail será utilizado para o colaborador acessar o sistema e visualizar seu cartão de ponto.
+</div>
+
+<h2>4. PREENCHENDO AS INFORMAÇÕES COMPLEMENTARES</h2>
+<ul class="checklist">
+    <li><strong>Crachá:</strong> Preencha com o PIS do colaborador (somente números)</li>
+    <li><strong>Matrícula:</strong> Preencha com o PIS do colaborador</li>
+    <li><strong>Estrutura:</strong> Selecione o gestor responsável pelo colaborador</li>
+    <li><strong>Grupo:</strong> Preencha com o local de trabalho (ex: Filial ou Matriz)</li>
+    <li><strong>Cargo:</strong> Selecione se o colaborador é CLT, Aprendiz ou Estágio</li>
+    <li><strong>Horário:</strong> Preencha com o horário de trabalho solicitado pelo gestor</li>
+</ul>
+
+<h2>5. REGRAS E CONFIGURAÇÕES ESPECÍFICAS</h2>
+<ul class="checklist">
+    <li><strong>Regra de Cálculo:</strong>
+        <ul>
+            <li>Se for <strong>Aprendiz ou Menor de Idade:</strong> selecione "Padrão"</li>
+            <li>Se for <strong>CLT e Maior de Idade:</strong> selecione "Banco de Horas Semestral"</li>
+        </ul>
+    </li>
+    <li><strong>Base de Horas:</strong>
+        <ul>
+            <li>Se for <strong>Aprendiz ou Estágio:</strong> selecione 150h</li>
+            <li>Se for <strong>CLT:</strong> selecione 220h</li>
+        </ul>
+    </li>
+    <li><strong>Salário:</strong> Selecione a opção "Mensalista"</li>
+    <li>Marque um X na caixinha <strong>"Realizar Controle de Ponto"</strong></li>
+    <li><strong>Tipo de Funcionário:</strong> Selecione "Normal"</li>
+    <li><strong>Ambiente de Trabalho:</strong> Selecione "Normal"</li>
+    <li><strong>Relógios Associados:</strong> Selecione todos os relógios disponíveis</li>
+</ul>
+
+<div class="passo">
+    <strong><span class="passo-numero">✓</span> Clique em "Salvar" para concluir o cadastro básico</strong>
+</div>
+
+<h2>6. CRIAÇÃO DE USUÁRIO PARA ACESSO AO SISTEMA</h2>
+<ol>
+    <li>Volte ao menu inicial do MD Comune</li>
+    <li>Pesquise o nome do colaborador recém-cadastrado</li>
+    <li>Selecione a caixinha ao lado do nome do colaborador</li>
+    <li>Na parte superior, clique na opção <strong>"Mais"</strong> (irá abrir um mini menu)</li>
+    <li>Clique em <strong>"Criar Usuário"</strong></li>
+    <li>No novo menu, localize as duas opções com a palavra <strong>"Funcionário"</strong></li>
+    <li>Altere de "Funcionário" para <strong>"Funcionário Personalizado"</strong> (em ambas)</li>
+    <li>No campo <strong>"Senha"</strong>, preencha com a <strong>data de admissão</strong> do colaborador</li>
+    <li>Clique em <strong>"Salvar"</strong></li>
+</ul>
+
+<h2>7. ASSOCIAÇÃO E ENVIO AOS RELÓGIOS</h2>
+<ol>
+    <li>Com o colaborador ainda selecionado, clique novamente em <strong>"Mais"</strong></li>
+    <li>Clique na opção <strong>"Associar ao Relógio"</strong></li>
+    <li>Selecione todos os relógios disponíveis e clique em <strong>"Associar"</strong></li>
+    <li>Com o colaborador ainda selecionado, clique novamente em <strong>"Mais"</strong></li>
+    <li>Clique na opção <strong>"Enviar ao Relógio"</strong></li>
+    <li>Selecione todas as opções de relógio disponíveis</li>
+    <li>Na área "Ações", marque <strong>"Exportar Funcionários e Credenciais"</strong></li>
+    <li>Clique em <strong>"Enviar"</strong></li>
+</ol>
+
+<h2>8. VERIFICAÇÃO DO CADASTRO DO USUÁRIO</h2>
+<ul>
+    <li>No menu superior, clique em: <strong>Definições > Sistemas > Usuário</strong></li>
+    <li>Na barra de pesquisa, digite o e-mail do colaborador e clique em <strong>"Pesquisar"</strong></li>
+    <li>Se o colaborador aparecer na busca, o usuário foi cadastrado com sucesso</li>
+</ul>
+
+<h2>9. TESTE FINAL DE ACESSO</h2>
+<ol>
+    <li>Abra uma <strong>guia anônima</strong> no navegador</li>
+    <li>Acesse o sistema MD Comune</li>
+    <li>Faça o login utilizando:
+        <ul>
+            <li><strong>Usuário:</strong> E-mail do colaborador</li>
+            <li><strong>Senha:</strong> Data de admissão</li>
+        </ul>
+    </li>
+    <li>Verifique se o acesso está funcionando corretamente</li>
+</ol>
+
+<h2>10. OBSERVAÇÕES IMPORTANTES</h2>
+<ul>
+    <li>Preencher <strong>apenas os campos mencionados</strong> neste POP</li>
+    <li>Utilizar apenas números (sem pontos ou caracteres especiais) para: CPF, PIS, Crachá, Matrícula</li>
+    <li>A data de admissão será utilizada como <strong>senha inicial</strong> do colaborador</li>
+    <li>Recomendar a <strong>troca de senha</strong> após primeiro acesso</li>
+</ul>
+
+<div class="atencao">
+    <strong>⚠️ RESPONSABILIDADE:</strong> O responsável pelo relógio deverá ficar encarregado de fazer o teste e o cadastro da biometria do novo colaborador.
+</div>
+
+<h2>📋 FLUXOGRAMA RESUMIDO</h2>
+<div class="dica">
+    <strong>Cadastro inicial → Criar usuário → Associar relógios → Enviar aos relógios → Verificar cadastro → Testar acesso → Cadastrar biometria</strong>
+</div>
+
+<div class="footer">
+    POP - Cadastro MD Comune | Comercial Maluli | Versão 1.0
+</div>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>POP - Lançamento de Notas Fiscais de Serviço no Protheus</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 20px; line-height: 1.6; }
+        h1 { color: #003366; border-bottom: 3px solid #003366; padding-bottom: 10px; }
+        h2 { color: #005599; margin-top: 30px; border-left: 5px solid #005599; padding-left: 15px; }
+        h3 { color: #0077aa; margin-top: 20px; }
+        .atencao { background: #fff3cd; border-left: 6px solid #ffc107; padding: 12px; margin: 20px 0; border-radius: 5px; }
+        .importante { background: #d9edf7; border-left: 6px solid #31708f; padding: 12px; margin: 20px 0; border-radius: 5px; }
+        .dica { background: #dff0d8; border-left: 6px solid #3c763d; padding: 12px; margin: 20px 0; border-radius: 5px; }
+        .footer { margin-top: 40px; font-size: 12px; text-align: center; border-top: 1px solid #ccc; padding-top: 15px; color: #666; }
+        code { background: #eee; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+        ul, ol { margin: 10px 0 15px 25px; }
+        li { margin: 6px 0; }
+    </style>
+</head>
+<body>
+
+<h1>POP – Lançamento de Notas Fiscais de Serviço no Protheus</h1>
+
+<p><strong>Código:</strong> POP.CP.004<br>
+<strong>Versão:</strong> 1.0<br>
+<strong>Responsável:</strong> Compras / Fiscal</p>
+
+<h2>1. Objetivo</h2>
+<p>Estabelecer os passos para o lançamento de <strong>Notas Fiscais de Serviço</strong> no sistema Protheus, garantindo a correta inserção dos dados e o controle interno.</p>
+
+<h2>2. Ambiente de Lançamento</h2>
+<p>O lançamento deve ser realizado no <strong>ambiente de Compras</strong> do Protheus.</p>
+<p><code>NO PROTHEUS NO MENU LATERAL: Atualizações > Movimentos > Documentos de Entrada</code></p>
+
+<h2>3. Procedimento</h2>
+
+<h3>3.1. Verificação Inicial</h3>
+<ul>
+    <li>Com a nota fiscal em mãos, <strong>verificar o CNPJ cadastrado na NF</strong> para lançar na filial correta.</li>
+</ul>
+
+<h3>3.2. Inclusão da Nota Fiscal</h3>
+<ol>
+    <li>Clicar na aba <strong>Incluir</strong>.</li>
+    <li>Selecionar a <strong>filial</strong>.</li>
+    <li>Preencher os campos:
+        <ul>
+            <li><strong>Nº da NF</strong></li>
+            <li><strong>Série</strong></li>
+            <li><strong>Data de emissão</strong></li>
+            <li><strong>Fornecedor</strong></li>
+            <li><strong>Espécie do documento</strong></li>
+        </ul>
+    </li>
+</ol>
+
+<div class="atencao">
+    <strong>⚠️ ATENÇÃO:</strong> Para notas de serviço, preencher <strong>Série com 3 dígitos</strong> e <strong>NF com 9 dígitos</strong>.
+</div>
+
+<h3>3.3. Pesquisa do Fornecedor</h3>
+<ul>
+    <li>Ao preencher o campo <strong>Fornecedor</strong>, clicar na <strong>lupa</strong> e pesquisar pelo <strong>CNPJ</strong> do prestador.</li>
+</ul>
+
+<h3>3.4. Espécie do Documento</h3>
+<ul>
+    <li>No caso de <strong>NF de Serviço</strong>, preencher <strong>NFS</strong> no campo <strong>Espécie do Documento</strong>.</li>
+</ul>
+
+<h3>3.5. Lançamento do Produto/Serviço</h3>
+<ol>
+    <li>Ir para a <strong>linha de produto</strong>.</li>
+    <li>Na célula do <strong>produto</strong>, dar <strong>Enter</strong> para aparecer uma lupa.</li>
+    <li>Clicar na lupa e pesquisar o <strong>código de serviço da NF</strong>.
+        <ul>
+            <li>Na lupa, pesquisar por <strong>descrição</strong>.</li>
+            <li>Colocar a <strong>inicial do código</strong> e pesquisar pela <strong>inicial da razão social do prestador</strong>.</li>
+        </ul>
+    </li>
+</ol>
+
+<div class="importante">
+    <strong>📌 IMPORTANTE:</strong> Toda nota fiscal precisa ter um <strong>produto atrelado a ela</strong>.
+</div>
+
+<ol start="4">
+    <li>Na linha do produto novamente:
+        <ul>
+            <li>Ir no campo <strong>Quantidade</strong> e preencher com <strong>1</strong>.</li>
+            <li>No campo <strong>Valor Unitário</strong>, colocar o <strong>valor total do serviço</strong>.</li>
+            <li>No campo <strong>Tipo de Entrada</strong>, preencher com <strong>140</strong>.</li>
+        </ul>
+    </li>
+</ol>
+
+<h3>3.6. Configuração da Duplicata</h3>
+<ol>
+    <li>No painel abaixo, clicar na opção <strong>Duplicata</strong>.</li>
+    <li>Ajustar a <strong>data do vencimento</strong> conforme consta no boleto.</li>
+</ol>
+
+<h3>3.7. Natureza da Operação</h3>
+<div class="atencao">
+    <strong>⚠️ Verificar a Natureza – sempre deve ser:</strong>
+    <p style="margin-top: 10px;"><strong>643</strong> ou <strong>644</strong></p>
+</div>
+
+<h3>3.8. Finalização</h3>
+<ol>
+    <li>Clicar na aba <strong>Informação/Cliente</strong>.</li>
+    <li>Confirmar se os dados estão no <strong>prestador correto</strong>.</li>
+    <li>Clicar em <strong>Salvar</strong>.</li>
+    <li>Fechar o <strong>pop-up branco</strong>.</li>
+    <li>Clicar em <strong>Visualizar</strong>.</li>
+    <li>Clicar em <strong>Duplicata</strong> e confirmar as informações do prestador.</li>
+</ol>
+
+<h2>4. Controle Interno</h2>
+<div class="importante">
+    <strong>📌 IMPORTANTE:</strong> Sempre que fizer um lançamento de NF de serviço, <strong>preencher a planilha em Excel</strong> para controle interno, registrando que a nota foi lançada.
+</div>
+
+<h2>5. Observações Finais</h2>
+<ul>
+    <li>Nunca esquecer de <strong>verificar o CNPJ</strong> antes do lançamento.</li>
+    <li>Confirmar a natureza correta (<strong>643 ou 644</strong>) antes de salvar.</li>
+    <li>Manter o <strong>controle da planilha sempre atualizado</strong>.</li>
+</ul>
+
+<div class="dica">
+    <strong>✅ CHECKLIST RÁPIDO:</strong>
+    <ul>
+        <li>☐ CNPJ verificado</li>
+        <li>☐ Série com 3 dígitos / NF com 9 dígitos</li>
+        <li>☐ Espécie: NFS</li>
+        <li>☐ Natureza: 643 ou 644</li>
+        <li>☐ Produto atrelado</li>
+        <li>☐ Planilha de controle atualizada</li>
+    </ul>
+</div>
+
+<div class="footer">
+    POP - Lançamento de Notas Fiscais de Serviço no Protheus | Comercial Maluli | Versão 1.0
+</div>
+
+</body>
+</html>

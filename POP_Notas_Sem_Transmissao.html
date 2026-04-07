@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>POP - Relatório de Notas Sem Transmissão</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 20px; line-height: 1.6; }
+        h1 { color: #003366; border-bottom: 3px solid #003366; padding-bottom: 10px; }
+        h2 { color: #005599; margin-top: 30px; border-left: 5px solid #005599; padding-left: 15px; }
+        h3 { color: #0077aa; margin-top: 20px; }
+        .atencao { background: #fff3cd; border-left: 6px solid #ffc107; padding: 12px; margin: 20px 0; border-radius: 5px; }
+        .importante { background: #d9edf7; border-left: 6px solid #31708f; padding: 12px; margin: 20px 0; border-radius: 5px; }
+        .footer { margin-top: 40px; font-size: 12px; text-align: center; border-top: 1px solid #ccc; padding-top: 15px; color: #666; }
+        code { background: #eee; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+        ul, ol { margin: 10px 0 15px 25px; }
+        li { margin: 6px 0; }
+    </style>
+</head>
+<body>
+
+<h1>POP – Relatório de Notas Sem Transmissão</h1>
+
+<p><strong>Código:</strong> POP.FISCAL.002<br>
+<strong>Versão:</strong> 1.0<br>
+<strong>Responsável:</strong> Fiscal / Apoio Administrativo</p>
+
+<h2>Objetivo</h2>
+<p>Este documento tem como objetivo padronizar a emissão do <strong>Relatório de Notas Sem Transmissão</strong> no Protheus, garantindo a conferência diária das notas fiscais que não foram transmitidas.</p>
+
+<h2>Acesso ao Sistema</h2>
+<ol>
+    <li>Acesse o Protheus.</li>
+    <li>Selecione a Filial <strong>"01 MATRIZ"</strong>.</li>
+    <li>Selecione o Ambiente <strong>"09"</strong> (Livros Fiscais).</li>
+    <li>Confirme.</li>
+</ol>
+
+<h2>Emissão do Relatório</h2>
+<ol>
+    <li>No menu lateral, navegue até: <code>Relatórios > Específicos Maluli > ADM Notas Sem Transmissão</code>.</li>
+    <li>Na tela de parâmetros que abrir, selecione as opções:
+        <ul>
+            <li><strong>Tipo de Impressão:</strong> VIA APOOL</li>
+            <li><strong>Formato:</strong> PAISAGEM</li>
+            <li><strong>Ambiente:</strong> CLIENTE</li>
+            <li><strong>Opções:</strong> PDF</li>
+        </ul>
+    </li>
+    <li>Clique em <strong>"Parâmetro"</strong>.</li>
+    <li>Preencha os campos:
+        <ul>
+            <li><strong>Excluir Serie 111:</strong> 111</li>
+            <li><strong>Excluir Serie 999:</strong> 999</li>
+            <li><strong>De Emissão:</strong> (data desejada para início do período)</li>
+            <li><strong>Até Emissão:</strong> (data desejada para fim do período)</li>
+            <li><strong>Nº PDV:</strong> (deixar em branco)</li>
+            <li><strong>Chave NFe:</strong> (deixar em branco)</li>
+            <li><strong>Especie Documento:</strong> SPED</li>
+            <li><strong>Retorno Dif de:</strong> 102</li>
+            <li><strong>Dt Cancel:</strong> (deixar em branco)</li>
+        </ul>
+    </li>
+    <li>Clique em <strong>"OK"</strong>.</li>
+</ol>
+
+<h2>Salvamento do Arquivo</h2>
+<ol>
+    <li>Na tela de impressão, selecione a orientação <strong>"HORIZONTAL"</strong> (PAISAGEM).</li>
+    <li>Salve o arquivo em formato PDF no seguinte destino:<br>
+    <code>FISCAL E CONTABIL / RELACAO CONFERENCIA / NOTAS SEM TRANSMISSAO / (ANO ATUAL) / (MES ATUAL)</code></li>
+</ol>
+
+<div class="importante">
+    <strong>📌 IMPORTANTE:</strong> O relatório deve ser salvo em formato PDF com orientação PAISAGEM.
+</div>
+
+<h2>Frequência</h2>
+<div class="atencao">
+    <strong>⏱️ Este relatório deve ser emitido DIARIAMENTE.</strong>
+</div>
+
+<div class="footer">
+    POP - Relatório de Notas Sem Transmissão | Comercial Maluli | Versão 1.0
+</div>
+
+</body>
+</html>

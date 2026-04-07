@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>POP - VT e VR</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1000px; margin: 40px auto; padding: 20px; line-height: 1.6; background: #f5f7fa; }
+        h1 { color: #003366; border-bottom: 3px solid #003366; padding-bottom: 10px; }
+        h2 { color: #005599; margin-top: 30px; border-left: 5px solid #005599; padding-left: 15px; }
+        h3 { color: #0077aa; margin-top: 20px; }
+        .atencao { background: #fff3cd; border-left: 6px solid #ffc107; padding: 12px; margin: 20px 0; border-radius: 8px; }
+        .importante { background: #d9edf7; border-left: 6px solid #31708f; padding: 12px; margin: 20px 0; border-radius: 8px; }
+        .dica { background: #dff0d8; border-left: 6px solid #3c763d; padding: 12px; margin: 20px 0; border-radius: 8px; }
+        .footer { margin-top: 40px; font-size: 12px; text-align: center; border-top: 1px solid #ccc; padding-top: 15px; color: #666; }
+        ul, ol { margin: 10px 0 15px 25px; }
+        li { margin: 6px 0; }
+        .checklist { list-style: none; padding-left: 0; }
+        .checklist li:before { content: "☐ "; font-size: 16px; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        td, th { border: 1px solid #ccc; padding: 8px; vertical-align: top; }
+        th { background: #e6e6e6; }
+    </style>
+</head>
+<body>
+
+<h1>POP – Gestão e Compra de Benefícios (VR e VT)</h1>
+<p><strong>Código:</strong> POP.RH.006<br><strong>Versão:</strong> 1.0<br><strong>Responsável:</strong> Departamento Pessoal</p>
+
+<h2>📋 RELATÓRIOS PARA BASE DE CÁLCULO</h2>
+<ul class="checklist">
+    <li>IMPRIMIR RELATÓRIO DE FALTAS (Emitir relatório do período com todas as faltas injustificadas para descontar VT e VR proporcionalmente)</li>
+    <li>IMPRIMIR RELATÓRIO DE AFASTADOS (Emitir listagem de colaboradores afastados por atestado, licença ou férias para tratar VT e VR corretamente)</li>
+    <li>IMPRIMIR RELATÓRIO DE FÉRIAS (Emitir relação de colaboradores que saíram ou entraram de férias no período para ajuste dos benefícios)</li>
+</ul>
+
+<h2>📋 MOVIMENTAÇÃO DE PESSOAL</h2>
+<ul class="checklist">
+    <li>INCLUIR ADMITIDOS (Adicionar no sistema de benefícios todos os colaboradores admitidos no período, cadastrando dados e solicitando cartões quando necessário)</li>
+    <li>EXCLUIR DEMITIDOS (Remover do sistema de benefícios os colaboradores desligados no período, bloqueando os cartões)</li>
+</ul>
+
+<h2>📋 CONFERÊNCIAS E AJUSTES</h2>
+<ul class="checklist">
+    <li>VERIFICAR FICHAS DE ALTERAÇÃO DE VT E VR (Conferir se há fichas de alteração de benefícios (mudança de endereço, opção por VT/VR, etc.) e aplicar as modificações necessárias)</li>
+    <li>VERIFICAR SE NOVOS CARTÕES DE VT FORAM ASSOCIADOS (Confirmar se os cartões físicos solicitados para novos colaboradores já foram vinculados às contas e estão ativos)</li>
+    <li>CONFERIR LISTA DE FUNCIONÁRIOS (Comparar a lista atual de colaboradores ativos com a base do sistema de benefícios para garantir que todos estão corretos)</li>
+    <li>INCLUIR OS SÁBADOS TRABALHADOS (Adicionar na carga de VT os sábados que serão trabalhados no mês seguinte, ajustando a quantidade de passes/dias)</li>
+    <li>VERIFICAR FREQUÊNCIA DAS ÚLTIMAS ADMISSÕES (Conferir os dias trabalhados pelos colaboradores admitidos recentemente para calcular corretamente a necessidade de VT/VR)</li>
+</ul>
+
+<h2>📋 APRENDIZES E PENDÊNCIAS</h2>
+<ul class="checklist">
+    <li>IMPRIMIR RELATÓRIO DAS AULAS/FALTAS APRENDIZES (Para menores aprendizes, emitir relatório de presença nas aulas teóricas, pois isso impacta o benefício)</li>
+    <li>VERIFICAR SE HÁ PENDÊNCIAS A SEREM DESCONTADAS DO PERÍODO ANTERIOR (Identificar se há valores de VT/VR concedidos a mais no mês anterior que precisam ser descontados na folha atual)</li>
+</ul>
+
+<h2>📅 CRONOGRAMA MENSAL DE AÇÕES</h2>
+
+<h3>1. Levantamento da Folha (Fechamento)</h3>
+<ul>
+    <li><strong>Incluir Admissões:</strong> Verificar novos colaboradores admitidos no mês e incluí-los no sistema de benefícios</li>
+    <li><strong>Excluir Demitidos:</strong> Bloquear/desativar os cartões de colaboradores desligados imediatamente para evitar uso indevido</li>
+</ul>
+
+<h3>2. Cálculo e Ajustes (Até dia X)</h3>
+<ul>
+    <li><strong>Vale Transporte:</strong> Calcular a quantidade de dias trabalhados no mês seguinte (considerando dias úteis). Lançar a quantidade no sistema.</li>
+    <li><strong>Vale Refeição/Alimentação:</strong> Inserir o valor do crédito por dia ou o valor total mensal no sistema (ex: R$ 25,00 por dia útil, R$ 550,00 no mês com 22 dias úteis)</li>
+    <li><strong>Descontar Faltas:</strong> Verificar o relatório de faltas e atrasos do mês anterior e ajustar o valor do benefício do mês seguinte ou provisionar o desconto na próxima compra de benefícios</li>
+</ul>
+
+<h3>3. Verificações Especiais</h3>
+<ul>
+    <li><strong>Gerar e conferir o Relatório de Sábado Trabalhado:</strong> Garantir que colaboradores que trabalham em regime de escala ou horário especial (incluindo sábados) recebam o VT proporcional</li>
+    <li><strong>Gerar e conferir o Relatório de Trabalho em Feriados:</strong> Ajustar os benefícios para colaboradores que trabalharam em feriados, se a política da empresa conceder benefício extra nesses dias</li>
+</ul>
+
+<h3>4. Pós-Envio (Prazo de Crédito)</h3>
+<div class="importante">
+    <strong>📌 OBSERVAÇÃO:</strong> A data da disponibilização do benefício deve ser no mês vigente. Verificar relatório de créditos e arquivar para conferência futura.
+</div>
+
+<h3>5. Verificação</h3>
+<ul>
+    <li>Verificar se haverá férias ou afastamento durante o período que vamos realizar a compra de benefícios</li>
+</ul>
+
+<div class="dica">
+    <strong>✅ CRONOGRAMA RESUMIDO:</strong>
+    <table>
+        <tr><th>Etapa</th><th>Descrição</th></tr>
+        <tr><td>1. Levantamento</td><td>Incluir admitidos / Excluir demitidos</td></tr>
+        <tr><td>2. Cálculo</td><td>Calcular VT (dias úteis) e VR (valor mensal)</td></tr>
+        <tr><td>3. Ajustes</td><td>Descontar faltas, sábados e feriados</td></tr>
+        <tr><td>4. Verificação</td><td>Conferir férias e afastamentos</td></tr>
+        <tr><td>5. Arquivo</td><td>Salvar relatórios e comprovantes</td></tr>
+    </table>
+</div>
+
+<div class="footer">
+    POP - VT e VR | Comercial Maluli | Versão 1.0
+</div>
+
+</body>
+</html>

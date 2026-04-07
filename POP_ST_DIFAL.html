@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>POP - Relatório ST e DIFAL no Protheus</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 20px; line-height: 1.6; }
+        h1 { color: #003366; border-bottom: 3px solid #003366; padding-bottom: 10px; }
+        h2 { color: #005599; margin-top: 30px; border-left: 5px solid #005599; padding-left: 15px; }
+        h3 { color: #0077aa; margin-top: 20px; }
+        .atencao { background: #fff3cd; border-left: 6px solid #ffc107; padding: 12px; margin: 20px 0; border-radius: 5px; }
+        .importante { background: #d9edf7; border-left: 6px solid #31708f; padding: 12px; margin: 20px 0; border-radius: 5px; }
+        .dica { background: #dff0d8; border-left: 6px solid #3c763d; padding: 12px; margin: 20px 0; border-radius: 5px; }
+        .footer { margin-top: 40px; font-size: 12px; text-align: center; border-top: 1px solid #ccc; padding-top: 15px; color: #666; }
+        code { background: #eee; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+        ul, ol { margin: 10px 0 15px 25px; }
+        li { margin: 6px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        td, th { border: 1px solid #ccc; padding: 8px; vertical-align: top; }
+        th { background: #e6e6e6; }
+    </style>
+</head>
+<body>
+
+<h1>POP – Emissão de Relatório de ST e DIFAL no Protheus</h1>
+
+<p><strong>Código:</strong> POP.FISCAL.001<br>
+<strong>Versão:</strong> 1.0<br>
+<strong>Responsável:</strong> Fiscal / Apoio Administrativo</p>
+
+<h2>Objetivo</h2>
+<p>Emitir corretamente os relatórios de <strong>ST (Substituição Tributária)</strong> e <strong>DIFAL (Difal)</strong> no sistema Protheus, contemplando os estados <strong>MG, SC e PR</strong>, para as filiais <strong>01 (Matriz)</strong> e <strong>02 a 05 (Filial)</strong>, salvando os arquivos em pastas organizadas por filial, ano e mês, e enviando por e-mail no segundo dia útil do mês seguinte.</p>
+
+<h2>Materiais necessários</h2>
+<ul>
+    <li>Acesso ao Protheus (filial 01, ambiente 09 – Fiscal)</li>
+    <li>Acesso à pasta compartilhada da empresa</li>
+    <li>E-mail corporativo configurado</li>
+    <li>Calendário para identificar o 2º dia útil do mês</li>
+</ul>
+
+<h2>Procedimento passo a passo</h2>
+
+<h3>1. Acessar o relatório no Protheus</h3>
+<ol>
+    <li>Entre no <strong>Protheus</strong> → Filial <strong>01</strong> (Matriz) → Ambiente <strong>09</strong> (Fiscal).</li>
+    <li>No menu à esquerda: <code>Relatórios > Especificações Maluli > ADM DT e DIFAL por Filial</code></li>
+    <li>Na tela de parâmetros que abrir, configure:
+        <ul>
+            <li><strong>Formato:</strong> Paisagem</li>
+            <li><strong>Tipo de impressão:</strong> VIA APOOL</li>
+            <li><strong>Ambiente:</strong> Cliente</li>
+            <li><strong>Opções:</strong> PDF</li>
+        </ul>
+    </li>
+    <li>Clique em <strong>Parâmetros</strong> para abrir a tela de filtros.</li>
+</ol>
+
+<h3>2. Preencher filtros gerais (base para todos os estados e filiais)</h3>
+<ul>
+    <li><strong>Emissão "de":</strong> data inicial do mês desejado (ex: 01/MM/AAAA)</li>
+    <li><strong>Emissão "até":</strong> data final do mês desejado (ex: 31/MM/AAAA)</li>
+    <li><strong>Série de:</strong> (deixar em branco)</li>
+    <li><strong>Série até:</strong> ZZ</li>
+    <li><strong>ST maior que:</strong> 0 , 0</li>
+    <li><strong>DIFAL maior que:</strong> 0 , 0</li>
+    <li><strong>DT CANCEL igual:</strong> (deixar em branco)</li>
+    <li><strong>ESPEC.DOC.igual:</strong> SPED</li>
+    <li><strong>CFOP de:</strong> 5000</li>
+    <li><strong>CFOP até:</strong> 99999</li>
+</ul>
+
+<div class="atencao">
+    <strong>⚠️ ATENÇÃO:</strong> Os campos <strong>Estado de / Estado até</strong> e <strong>Filial de / Filial até</strong> serão preenchidos conforme as repetições abaixo.
+</div>
+
+<h3>3. Repetições necessárias (6 emissões no total)</h3>
+<p>Você deve repetir o processo <strong>6 vezes</strong>:</p>
+<ul>
+    <li>3 estados (MG, SC, PR) para <strong>Filial de 01 a 01 (Matriz)</strong></li>
+    <li>3 estados (MG, SC, PR) para <strong>Filial de 02 a 05 (Filial)</strong></li>
+</ul>
+
+<h4>3.1. Para a Matriz (filial 01)</h4>
+<p>A cada emissão, configure na tela de filtros:</p>
+<ul>
+    <li><strong>Estado de:</strong> MG / SC / PR (um por vez)</li>
+    <li><strong>Estado até:</strong> mesma sigla do estado de</li>
+    <li><strong>Filial de:</strong> 01</li>
+    <li><strong>Filial até:</strong> 01</li>
+</ul>
+<p>Repita <strong>3 vezes</strong> (MG, SC, PR).</p>
+
+<h4>3.2. Para a Filial (filiais 02 a 05)</h4>
+<p>A cada emissão, configure:</p>
+<ul>
+    <li><strong>Estado de:</strong> MG / SC / PR (um por vez)</li>
+    <li><strong>Estado até:</strong> mesma sigla</li>
+    <li><strong>Filial de:</strong> 02</li>
+    <li><strong>Filial até:</strong> 05</li>
+</ul>
+<p>Repita <strong>3 vezes</strong> (MG, SC, PR).</p>
+
+<div class="importante">
+    <strong>🔁 IMPORTANTE:</strong> Após cada combinação (estado + filial), clique em <strong>OK > OK</strong> para gerar o PDF.
+</div>
+
+<h3>4. Salvar o documento na pasta compartilhada</h3>
+<p>Para cada PDF gerado, siga o caminho abaixo:</p>
+<p><code>Pasta Compartilhada > Fiscal e Contábil > Fiscal - Relatório Conferência > Relatório ST e DIFAL > (Filial correspondente) > (Ano correspondente) > (Mês correspondente)</code></p>
+<p><strong>Exemplo:</strong> <code>... > Relatório ST e DIFAL > Filial 01 > 2026 > ABRIL</code></p>
+
+<h4>Nome do arquivo (padrão):</h4>
+<p><strong><code>(Mês/Ano) - (Estado) - (Filial).pdf</code></strong></p>
+<p>Exemplo: <code>ABRIL2026 - MG - 01.pdf</code></p>
+
+<h3>5. Envio por e-mail (segundo dia útil do mês seguinte)</h3>
+<p><strong>Para (To):</strong></p>
+<ul>
+    <li>elisangela.silva@diagrama.com.br</li>
+    <li>selma@diagrama.com.br</li>
+    <li>graziela@diagrama.com.br</li>
+</ul>
+<p><strong>Com cópia (CC):</strong></p>
+<ul>
+    <li>adm@comercialmaluli.com.br</li>
+    <li>jftavares@terra.com.br</li>
+</ul>
+<p><strong>Assunto sugerido:</strong> <code>Relatório ST e DIFAL - [Mês/Ano]</code></p>
+<p><strong>Anexos:</strong> os 6 PDFs gerados (ou enviar separadamente se houver limite de tamanho).</p>
+
+<h2>Observações importantes</h2>
+<ul>
+    <li>A data de emissão do relatório deve ser <strong>o mês completo</strong> (ex: 01/04/2026 a 30/04/2026).</li>
+    <li>Não esquecer de <strong>passar pela tela de parâmetros 6 vezes</strong> (3 estados × 2 grupos de filial).</li>
+    <li>Os arquivos devem ser salvos <strong>antes do envio</strong>, na pasta correta.</li>
+    <li>O envio deve ocorrer <strong>todo segundo dia útil do mês seguinte</strong>.</li>
+</ul>
+
+<div class="dica">
+    <strong>✅ Checklist:</strong>
+    <table>
+        <tr><th>Estado</th><th>Filial 01 (Matriz)</th><th>Filial 02-05</th></tr>
+        <tr><td>MG</td><td>☐</td><td>☐</td></tr>
+        <tr><td>SC</td><td>☐</td><td>☐</td></tr>
+        <tr><td>PR</td><td>☐</td><td>☐</td></tr>
+    </table>
+</div>
+
+<div class="footer">
+    POP - Relatório ST e DIFAL | Comercial Maluli | Versão 1.0
+</div>
+
+</body>
+</html>
